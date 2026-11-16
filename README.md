@@ -1,33 +1,37 @@
-# Manim · Órbita
+# Manim · Neo
 
-Web de tutoriales de Manim con dos temas: **Oscuro**, el diseño Órbita con glow y neón suave, y **Old**, la propuesta Prisma clara con vidrio lavanda y reflejos Aero clásicos.
+A Manim tutorial website with two themes: **Neo**, a dark Aero design with soft glow and subtle neon accents, and **Old**, the light Prisma design with lavender glass and classic Aero reflections.
 
-La primera visita utiliza Oscuro, independientemente del tema del sistema. El selector superior guarda la elección en el navegador. Cambiar de tema conserva la lección, el progreso y el estado de la demo.
+The first visit uses Neo regardless of the system theme. The selector remembers the choice in the browser. Switching themes preserves the lesson, completion status, and animation state. Previous dark-theme preferences remain compatible.
 
-## Abrir
+## Open
 
-Abre `dist/index.html` directamente en el navegador. No requiere instalación ni compilación. `dist/orbita.html` conserva el enlace anterior y redirige a la página principal.
+Open `dist/index.html` directly in a browser. No installation or build step is required. `dist/orbita.html` preserves the original link and redirects to the main page. Legacy Spanish section links still work.
 
-Para servirla por HTTP localmente:
+To serve the site over local HTTP:
 
 ```sh
 python3 -m http.server 5173 --directory dist
 ```
 
-## Archivos
+## Files
 
-- `dist/index.html`: entrada de la página.
-- `dist/assets/app.js`: contenido de la lección, ficha de estilos, descargas y controles interactivos.
-- `dist/assets/styles.css`: diseño y adaptación a pantallas pequeñas.
-- `dist/assets/old.css`: estilos originales de Prisma recuperados para el tema Old.
-- `.openai/hosting.json`: identidad de Sites; no implica que el sitio esté publicado.
+- `dist/index.html`: page entry point.
+- `dist/assets/app.js`: lesson content, style guide, downloads, and interactive controls.
+- `dist/assets/styles.css`: shared styles, Neo theme, and responsive layout.
+- `dist/assets/old.css`: the original Prisma styles restored for the Old theme.
+- `.openai/hosting.json`: Sites identity; its presence does not mean the site is published.
 
-La vista previa de la animación es una simulación en el navegador. El ejemplo Python se puede descargar y ejecutar por separado con Manim Community.
+The animation preview is a browser simulation. Download `first_scene.py` to run the Python example separately with Manim Community:
 
-## Comprobación
+```sh
+manim -pql first_scene.py FirstScene
+```
+
+## Validation
 
 ```sh
 node --check dist/assets/app.js
 ```
 
-Revisar en el navegador los cambios visuales, la navegación, la ficha de estilos y los controles de reproducción.
+Check visual changes, navigation, theme switching, the style guide, and playback controls in the browser.

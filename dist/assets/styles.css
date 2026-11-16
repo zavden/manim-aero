@@ -33,7 +33,7 @@ svg{display:inline-block}
 .primary-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
 
 /* Common lesson components */
-body[data-theme=orbita]{--bg:#e8efeb;--surface:#f8fbf9;--text:#263b35;--muted:#748078;--accent:#547565;--border:#cbd8cf;--radius:12px;--panel:#f4f8f5;--code:#1e2a2c;background:radial-gradient(ellipse at 8% 10%,#c9dbcf,transparent 50%),radial-gradient(ellipse at 100% 40%,#d6dcdf,transparent 60%),var(--bg);background-attachment:fixed}
+body[data-theme=neo]{--bg:#e8efeb;--surface:#f8fbf9;--text:#263b35;--muted:#748078;--accent:#547565;--border:#cbd8cf;--radius:12px;--panel:#f4f8f5;--code:#1e2a2c;background:radial-gradient(ellipse at 8% 10%,#c9dbcf,transparent 50%),radial-gradient(ellipse at 100% 40%,#d6dcdf,transparent 60%),var(--bg);background-attachment:fixed}
 .style-trigger{display:flex;align-items:center;gap:7px;font-size:11px}
 .site-shell{max-width:1450px;margin:0 auto;padding:0 30px}
 .site-header{height:99px;display:flex;align-items:center;gap:55px}
@@ -188,57 +188,57 @@ dd{text-align:right;margin:0}
 .toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#26372f;color:#f4f7f0;box-shadow:0 4px 20px #0003;padding:12px 20px;border-radius:8px;z-index:100;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;max-width:90vw}
 .toast.visible{opacity:1;transform:translate(-50%,0)}
 
-/* 02 · Órbita — a midnight animation studio */
-body[data-theme=orbita]{--bg:#191e29;--surface:#202637;--text:#eae8e3;--accent:#b5aff2;--muted:#a1a9be;--border:#3d455b;--panel:#232b3d;--inline:#ffffff0c;--code:#151b28;background:radial-gradient(ellipse at 50% -10%,#50578b80,transparent 50%),#191e29}
-[data-theme=orbita] .site-shell{max-width:1270px;padding:0 44px}
-[data-theme=orbita] .site-header{height:108px}
-[data-theme=orbita] .header-nav .selected{border-color:#8bbda3;color:#a4dfbf}
-[data-theme=orbita] .lesson-layout{display:block;border:0;background:none;box-shadow:none;backdrop-filter:none;overflow:visible}
-[data-theme=orbita] .sidebar{display:block;border:1px solid #626c8b55;background:linear-gradient(#4c556e70,#30394d70 49%,#28314770 50%,#363e5660);padding:0;border-radius:9px;box-shadow:inset 0 1px 0 #ffffff20,0 5px 10px #0001;margin-bottom:30px}
-[data-theme=orbita] .sidebar-title,[data-theme=orbita] .course-note,[data-theme=orbita] .reference-link{display:none}
-[data-theme=orbita] .sidebar nav{display:flex;align-items:center;justify-content:space-around;padding:6px}
-[data-theme=orbita] .lesson-link{margin:0;flex:1;padding:12px 16px;border-radius:5px;font-size:11px}
-[data-theme=orbita] .lesson-link small{display:none}
-[data-theme=orbita] .lesson-link.active{background:linear-gradient(#b6bada2b,#8b91c512);border-color:#9097c555;color:#e4e5fc;box-shadow:inset 0 1px 0 #ffffff18}
-[data-theme=orbita] .lesson-link:hover{background:#ffffff0b}
-[data-theme=orbita] .lesson-main{background:none}
-[data-theme=orbita] .breadcrumbs{padding:0 0 15px;background:none;border-color:#ffffff0d}
-[data-theme=orbita] .lesson-hero{padding:35px 0 45px;gap:80px}
-[data-theme=orbita] .hero-text h1{font-size:65px;letter-spacing:-2.5px;font-weight:450;margin-top:22px}
-[data-theme=orbita] .hero-text h1 em{color:#9bd8b7}
-[data-theme=orbita] .hero-text>p:not(.eyebrow){font-size:14px}
-[data-theme=orbita] .hero-art{flex-basis:32%;height:290px;margin-right:20px}
-[data-theme=orbita] .hero-circle{width:144px;height:144px;top:105px;left:8%;background:radial-gradient(circle at 35% 15%,#c9decbbb,#8bbda355 48%,#75998360 50%,#9ebfa077);border-color:#9ec2ac99;box-shadow:inset 0 2px 4px #e9ffe8aa,0 0 50px #a5cbac20}
-[data-theme=orbita] .hero-square{width:133px;height:133px;top:35px;background:linear-gradient(140deg,#babde5a0,#686da650 49%,#51568770 50%,#8387b688);box-shadow:inset 0 1px 0 #dbe0ff99,0 0 60px #7f84c330}
-[data-theme=orbita] .hero-triangle{width:110px;height:100px;top:170px}
-[data-theme=orbita] .work-section,[data-theme=orbita] .concepts{padding:25px 0 0}
-[data-theme=orbita] .section-heading h2{font-size:26px;font-weight:450}
-[data-theme=orbita] .lab-grid{gap:22px;grid-template-columns:1.2fr 1fr}
-[data-theme=orbita] .code-panel{border-color:#4d5672;box-shadow:0 10px 35px #0002}
-[data-theme=orbita] .code-panel pre{font-size:12px;line-height:1.9;min-height:320px;padding-top:19px}
-[data-theme=orbita] .code-line{min-height:22.8px}
-[data-theme=orbita] .panel-bar{height:41px;background:linear-gradient(#424b6355,#29314755);font-size:11px}
-[data-theme=orbita] .preview-panel .panel-bar{background:linear-gradient(#46506c70,#30394d70);border-color:#48516a;color:#c6cbe1}
-[data-theme=orbita] .preview-stage{height:279px;background:radial-gradient(ellipse,#303d4c60,#191f2e 80%)}
-[data-theme=orbita] .player-controls{background:linear-gradient(#37415880,#29324690)}
-[data-theme=orbita] .play-button{background:linear-gradient(#bcd2bf,#739a82);border-color:#97b6a0;color:#1f3c2d}
-[data-theme=orbita] .player-controls input{background:linear-gradient(to right,#9aba9c var(--progress,0%),#4a536b var(--progress,0%))}
-[data-theme=orbita] .primary-btn{background:linear-gradient(#bed7c5,#9dbca8 49%,#8dac99 50%,#a7c2af);border-color:#b1cdb8;color:#223c2d;box-shadow:inset 0 1px 0 #e4f9e4a0,0 4px 15px #8bbda310}
-[data-theme=orbita] .terminal{background:#232b3d;box-shadow:inset 0 1px 0 #ffffff09;padding:14px}
-[data-theme=orbita] .terminal code{font-size:11px}
-[data-theme=orbita] .tip{background:#8bbda30a;border-color:#8bbda335}
-[data-theme=orbita] .tip p{color:#adbab1}
-[data-theme=orbita] .tip strong{color:#c0d2c1}
-[data-theme=orbita] .concepts{padding-top:40px}
-[data-theme=orbita] .concept-grid article{background:linear-gradient(135deg,#434c6029,#222a3b);border-color:#3b445b;padding:24px}
-[data-theme=orbita] .concept-grid h3{font-size:18px;font-weight:450}
-[data-theme=orbita] .concept-grid p{font-size:12px}
-[data-theme=orbita] .practice{margin:40px 0 0}
-[data-theme=orbita] .practice h2{font-size:25px;font-weight:450}
-[data-theme=orbita] .practice p{font-size:12px}
-[data-theme=orbita] .complete-button{background:linear-gradient(#45516b60,#333f5460);box-shadow:inset 0 1px 0 #ffffff10;color:#b4c9bc}
-[data-theme=orbita] .complete-button.completed{background:#384f44;color:#d3ebd8}
-[data-theme=orbita] .lesson-footer{margin:35px 0 0}
+/* 02 · Neo — a midnight animation studio */
+body[data-theme=neo]{--bg:#191e29;--surface:#202637;--text:#eae8e3;--accent:#b5aff2;--muted:#a1a9be;--border:#3d455b;--panel:#232b3d;--inline:#ffffff0c;--code:#151b28;background:radial-gradient(ellipse at 50% -10%,#50578b80,transparent 50%),#191e29}
+[data-theme=neo] .site-shell{max-width:1270px;padding:0 44px}
+[data-theme=neo] .site-header{height:108px}
+[data-theme=neo] .header-nav .selected{border-color:#8bbda3;color:#a4dfbf}
+[data-theme=neo] .lesson-layout{display:block;border:0;background:none;box-shadow:none;backdrop-filter:none;overflow:visible}
+[data-theme=neo] .sidebar{display:block;border:1px solid #626c8b55;background:linear-gradient(#4c556e70,#30394d70 49%,#28314770 50%,#363e5660);padding:0;border-radius:9px;box-shadow:inset 0 1px 0 #ffffff20,0 5px 10px #0001;margin-bottom:30px}
+[data-theme=neo] .sidebar-title,[data-theme=neo] .course-note,[data-theme=neo] .reference-link{display:none}
+[data-theme=neo] .sidebar nav{display:flex;align-items:center;justify-content:space-around;padding:6px}
+[data-theme=neo] .lesson-link{margin:0;flex:1;padding:12px 16px;border-radius:5px;font-size:11px}
+[data-theme=neo] .lesson-link small{display:none}
+[data-theme=neo] .lesson-link.active{background:linear-gradient(#b6bada2b,#8b91c512);border-color:#9097c555;color:#e4e5fc;box-shadow:inset 0 1px 0 #ffffff18}
+[data-theme=neo] .lesson-link:hover{background:#ffffff0b}
+[data-theme=neo] .lesson-main{background:none}
+[data-theme=neo] .breadcrumbs{padding:0 0 15px;background:none;border-color:#ffffff0d}
+[data-theme=neo] .lesson-hero{padding:35px 0 45px;gap:80px}
+[data-theme=neo] .hero-text h1{font-size:65px;letter-spacing:-2.5px;font-weight:450;margin-top:22px}
+[data-theme=neo] .hero-text h1 em{color:#9bd8b7}
+[data-theme=neo] .hero-text>p:not(.eyebrow){font-size:14px}
+[data-theme=neo] .hero-art{flex-basis:32%;height:290px;margin-right:20px}
+[data-theme=neo] .hero-circle{width:144px;height:144px;top:105px;left:8%;background:radial-gradient(circle at 35% 15%,#c9decbbb,#8bbda355 48%,#75998360 50%,#9ebfa077);border-color:#9ec2ac99;box-shadow:inset 0 2px 4px #e9ffe8aa,0 0 50px #a5cbac20}
+[data-theme=neo] .hero-square{width:133px;height:133px;top:35px;background:linear-gradient(140deg,#babde5a0,#686da650 49%,#51568770 50%,#8387b688);box-shadow:inset 0 1px 0 #dbe0ff99,0 0 60px #7f84c330}
+[data-theme=neo] .hero-triangle{width:110px;height:100px;top:170px}
+[data-theme=neo] .work-section,[data-theme=neo] .concepts{padding:25px 0 0}
+[data-theme=neo] .section-heading h2{font-size:26px;font-weight:450}
+[data-theme=neo] .lab-grid{gap:22px;grid-template-columns:1.2fr 1fr}
+[data-theme=neo] .code-panel{border-color:#4d5672;box-shadow:0 10px 35px #0002}
+[data-theme=neo] .code-panel pre{font-size:12px;line-height:1.9;min-height:320px;padding-top:19px}
+[data-theme=neo] .code-line{min-height:22.8px}
+[data-theme=neo] .panel-bar{height:41px;background:linear-gradient(#424b6355,#29314755);font-size:11px}
+[data-theme=neo] .preview-panel .panel-bar{background:linear-gradient(#46506c70,#30394d70);border-color:#48516a;color:#c6cbe1}
+[data-theme=neo] .preview-stage{height:279px;background:radial-gradient(ellipse,#303d4c60,#191f2e 80%)}
+[data-theme=neo] .player-controls{background:linear-gradient(#37415880,#29324690)}
+[data-theme=neo] .play-button{background:linear-gradient(#bcd2bf,#739a82);border-color:#97b6a0;color:#1f3c2d}
+[data-theme=neo] .player-controls input{background:linear-gradient(to right,#9aba9c var(--progress,0%),#4a536b var(--progress,0%))}
+[data-theme=neo] .primary-btn{background:linear-gradient(#bed7c5,#9dbca8 49%,#8dac99 50%,#a7c2af);border-color:#b1cdb8;color:#223c2d;box-shadow:inset 0 1px 0 #e4f9e4a0,0 4px 15px #8bbda310}
+[data-theme=neo] .terminal{background:#232b3d;box-shadow:inset 0 1px 0 #ffffff09;padding:14px}
+[data-theme=neo] .terminal code{font-size:11px}
+[data-theme=neo] .tip{background:#8bbda30a;border-color:#8bbda335}
+[data-theme=neo] .tip p{color:#adbab1}
+[data-theme=neo] .tip strong{color:#c0d2c1}
+[data-theme=neo] .concepts{padding-top:40px}
+[data-theme=neo] .concept-grid article{background:linear-gradient(135deg,#434c6029,#222a3b);border-color:#3b445b;padding:24px}
+[data-theme=neo] .concept-grid h3{font-size:18px;font-weight:450}
+[data-theme=neo] .concept-grid p{font-size:12px}
+[data-theme=neo] .practice{margin:40px 0 0}
+[data-theme=neo] .practice h2{font-size:25px;font-weight:450}
+[data-theme=neo] .practice p{font-size:12px}
+[data-theme=neo] .complete-button{background:linear-gradient(#45516b60,#333f5460);box-shadow:inset 0 1px 0 #ffffff10;color:#b4c9bc}
+[data-theme=neo] .complete-button.completed{background:#384f44;color:#d3ebd8}
+[data-theme=neo] .lesson-footer{margin:35px 0 0}
 
 /* Small screens and comfortable intermediate widths */
 @media(min-width:1500px){.lesson-hero{padding:48px 42px}
@@ -276,7 +276,7 @@ body[data-theme=orbita]{--bg:#191e29;--surface:#202637;--text:#eae8e3;--accent:#
 .lesson-footer{margin-left:27px;margin-right:27px}
 .terminal-label{display:none}
 .lesson-edition{display:none}
-[data-theme=orbita] .hero-text h1{font-size:57px}
+[data-theme=neo] .hero-text h1{font-size:57px}
 }
 
 @media(max-width:900px){.lesson-layout{grid-template-columns:160px minmax(0,1fr)}
@@ -306,15 +306,15 @@ body[data-theme=orbita]{--bg:#191e29;--surface:#202637;--text:#eae8e3;--accent:#
 .header-caption{display:none}
 .site-header{height:90px;justify-content:space-between}
 .header-nav{gap:23px;font-size:11px}
-[data-theme=orbita] .site-shell{padding:0 28px}
-[data-theme=orbita] .lesson-link{padding:12px 10px;font-size:10px}
-[data-theme=orbita] .hero-art{display:block;flex-basis:33%;transform:scale(.8);margin-left:-40px;margin-right:0}
-[data-theme=orbita] .lesson-hero{gap:0}
-[data-theme=orbita] .hero-text h1{font-size:50px}
-[data-theme=orbita] .hero-text>p:not(.eyebrow){font-size:12px}
-[data-theme=orbita] .lab-grid{grid-template-columns:1fr 1fr;gap:15px}
-[data-theme=orbita] .code-panel pre{font-size:10px}
-[data-theme=orbita] .hero-text .eyebrow{font-size:7px}
+[data-theme=neo] .site-shell{padding:0 28px}
+[data-theme=neo] .lesson-link{padding:12px 10px;font-size:10px}
+[data-theme=neo] .hero-art{display:block;flex-basis:33%;transform:scale(.8);margin-left:-40px;margin-right:0}
+[data-theme=neo] .lesson-hero{gap:0}
+[data-theme=neo] .hero-text h1{font-size:50px}
+[data-theme=neo] .hero-text>p:not(.eyebrow){font-size:12px}
+[data-theme=neo] .lab-grid{grid-template-columns:1fr 1fr;gap:15px}
+[data-theme=neo] .code-panel pre{font-size:10px}
+[data-theme=neo] .hero-text .eyebrow{font-size:7px}
 }
 
 @media(max-width:650px){html{scroll-padding-top:100px}
@@ -389,83 +389,83 @@ body[data-theme=orbita]{--bg:#191e29;--surface:#202637;--text:#eae8e3;--accent:#
 dl>div{gap:15px;font-size:10px}
 .dialog-content .primary-btn{font-size:11px}
 .toast{font-size:11px;width:max-content;text-align:center}
-[data-theme=orbita] .site-shell{padding:0 20px}
-[data-theme=orbita] .site-header{height:87px}
-[data-theme=orbita] .sidebar{display:none;margin-bottom:22px}
-[data-theme=orbita] .sidebar.mobile-open{display:block}
-[data-theme=orbita] .sidebar nav{display:grid;grid-template-columns:1fr 1fr;gap:5px}
-[data-theme=orbita] .lesson-link{font-size:10px}
-[data-theme=orbita] .lesson-hero{padding:25px 0 33px}
-[data-theme=orbita] .hero-art{display:none}
-[data-theme=orbita] .hero-text h1{font-size:49px}
-[data-theme=orbita] .hero-text>p:not(.eyebrow){font-size:12px}
-[data-theme=orbita] .breadcrumbs{padding:4px 0 15px;font-size:8px}
-[data-theme=orbita] .work-section,[data-theme=orbita] .concepts{padding:22px 0 0}
-[data-theme=orbita] .section-heading h2{font-size:23px}
-[data-theme=orbita] .lab-grid{grid-template-columns:1fr}
-[data-theme=orbita] .code-panel pre{min-height:0;font-size:10px;line-height:1.95}
-[data-theme=orbita] .code-line{min-height:19.5px}
-[data-theme=orbita] .preview-stage{height:240px}
-[data-theme=orbita] .terminal code{font-size:9px}
-[data-theme=orbita] .concept-grid article{padding:18px 18px 18px 66px}
-[data-theme=orbita] .concept-grid p{font-size:11px}
-[data-theme=orbita] .practice h2{font-size:23px}
-[data-theme=orbita] .practice p{font-size:11px}
-[data-theme=orbita] .practice{margin-top:30px}
+[data-theme=neo] .site-shell{padding:0 20px}
+[data-theme=neo] .site-header{height:87px}
+[data-theme=neo] .sidebar{display:none;margin-bottom:22px}
+[data-theme=neo] .sidebar.mobile-open{display:block}
+[data-theme=neo] .sidebar nav{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+[data-theme=neo] .lesson-link{font-size:10px}
+[data-theme=neo] .lesson-hero{padding:25px 0 33px}
+[data-theme=neo] .hero-art{display:none}
+[data-theme=neo] .hero-text h1{font-size:49px}
+[data-theme=neo] .hero-text>p:not(.eyebrow){font-size:12px}
+[data-theme=neo] .breadcrumbs{padding:4px 0 15px;font-size:8px}
+[data-theme=neo] .work-section,[data-theme=neo] .concepts{padding:22px 0 0}
+[data-theme=neo] .section-heading h2{font-size:23px}
+[data-theme=neo] .lab-grid{grid-template-columns:1fr}
+[data-theme=neo] .code-panel pre{min-height:0;font-size:10px;line-height:1.95}
+[data-theme=neo] .code-line{min-height:19.5px}
+[data-theme=neo] .preview-stage{height:240px}
+[data-theme=neo] .terminal code{font-size:9px}
+[data-theme=neo] .concept-grid article{padding:18px 18px 18px 66px}
+[data-theme=neo] .concept-grid p{font-size:11px}
+[data-theme=neo] .practice h2{font-size:23px}
+[data-theme=neo] .practice p{font-size:11px}
+[data-theme=neo] .practice{margin-top:30px}
 }
 
-/* Órbita: clear glass artwork, with restrained neon in the working UI. */
-body[data-theme=orbita]{--neon-mint:#95ebd0;--neon-lilac:#bdaaff;background:radial-gradient(ellipse at 66% 7%,#7162c332,transparent 40%),radial-gradient(ellipse at 92% 35%,#8bbda30b,transparent 34%),radial-gradient(ellipse at 50% -10%,#50578b80,transparent 50%),#191e29;background-attachment:fixed}
+/* Neo: clear glass artwork, with restrained neon in the working UI. */
+body[data-theme=neo]{--neon-mint:#95ebd0;--neon-lilac:#bdaaff;background:radial-gradient(ellipse at 66% 7%,#7162c332,transparent 40%),radial-gradient(ellipse at 92% 35%,#8bbda30b,transparent 34%),radial-gradient(ellipse at 50% -10%,#50578b80,transparent 50%),#191e29;background-attachment:fixed}
 
-[data-theme=orbita] .header-nav .selected{filter:drop-shadow(0 2px 5px #9bc9ae32)}
+[data-theme=neo] .header-nav .selected{filter:drop-shadow(0 2px 5px #9bc9ae32)}
 
-[data-theme=orbita] .hero-text h1 em{text-shadow:0 0 32px #8bbda318}
+[data-theme=neo] .hero-text h1 em{text-shadow:0 0 32px #8bbda318}
 
-[data-theme=orbita] .hero-art::before{content:none}
+[data-theme=neo] .hero-art::before{content:none}
 
-[data-theme=orbita] .hero-circle{box-shadow:inset 0 1px 2px #e9ffe880}
+[data-theme=neo] .hero-circle{box-shadow:inset 0 1px 2px #e9ffe880}
 
-[data-theme=orbita] .hero-square{box-shadow:inset 0 1px 0 #dbe0ff80}
+[data-theme=neo] .hero-square{box-shadow:inset 0 1px 0 #dbe0ff80}
 
-[data-theme=orbita] .sidebar{box-shadow:inset 0 1px 0 #c2c7ff2b,0 0 24px #858dcc09,0 5px 10px #0001}
+[data-theme=neo] .sidebar{box-shadow:inset 0 1px 0 #c2c7ff2b,0 0 24px #858dcc09,0 5px 10px #0001}
 
-[data-theme=orbita] .lesson-link.active{border-color:#9ca6e166;box-shadow:inset 0 1px 0 #ffffff24,inset 0 0 16px #a1acff08,0 0 12px #929dfa16}
+[data-theme=neo] .lesson-link.active{border-color:#9ca6e166;box-shadow:inset 0 1px 0 #ffffff24,inset 0 0 16px #a1acff08,0 0 12px #929dfa16}
 
-[data-theme=orbita] .primary-btn{box-shadow:inset 0 1px 0 #e4f9e4c0,0 0 15px #a4d3ae20,0 4px 20px #8bbda314;transition:filter .2s,transform .2s,box-shadow .2s}
+[data-theme=neo] .primary-btn{box-shadow:inset 0 1px 0 #e4f9e4c0,0 0 15px #a4d3ae20,0 4px 20px #8bbda314;transition:filter .2s,transform .2s,box-shadow .2s}
 
-[data-theme=orbita] .primary-btn:hover{box-shadow:inset 0 1px 0 #effff0,0 0 20px #a4d3ae32,0 5px 24px #8bbda320}
+[data-theme=neo] .primary-btn:hover{box-shadow:inset 0 1px 0 #effff0,0 0 20px #a4d3ae32,0 5px 24px #8bbda320}
 
-[data-theme=orbita] .code-panel{border-color:#747da27d;box-shadow:0 0 0 1px #b4bcff06,0 0 25px #8a92e010,0 10px 35px #0002}
+[data-theme=neo] .code-panel{border-color:#747da27d;box-shadow:0 0 0 1px #b4bcff06,0 0 25px #8a92e010,0 10px 35px #0002}
 
-[data-theme=orbita] .code-panel .panel-bar{position:relative}
+[data-theme=neo] .code-panel .panel-bar{position:relative}
 
-[data-theme=orbita] .code-panel .panel-bar::after{content:"";position:absolute;bottom:-1px;left:13px;width:140px;height:1px;background:linear-gradient(90deg,#95ebd099,#bdaaff88,transparent);box-shadow:0 1px 7px #95ebd020;pointer-events:none}
+[data-theme=neo] .code-panel .panel-bar::after{content:"";position:absolute;bottom:-1px;left:13px;width:140px;height:1px;background:linear-gradient(90deg,#95ebd099,#bdaaff88,transparent);box-shadow:0 1px 7px #95ebd020;pointer-events:none}
 
-[data-theme=orbita] .code-panel .kw{color:var(--neon-lilac);text-shadow:0 0 9px #bdaaff1f}
+[data-theme=neo] .code-panel .kw{color:var(--neon-lilac);text-shadow:0 0 9px #bdaaff1f}
 
-[data-theme=orbita] .code-panel .str{color:var(--neon-mint);text-shadow:0 0 9px #95ebd017}
+[data-theme=neo] .code-panel .str{color:var(--neon-mint);text-shadow:0 0 9px #95ebd017}
 
-[data-theme=orbita] .code-panel .panel-bar>span:first-child svg{color:var(--neon-mint);filter:drop-shadow(0 0 4px #95ebd035)}
+[data-theme=neo] .code-panel .panel-bar>span:first-child svg{color:var(--neon-mint);filter:drop-shadow(0 0 4px #95ebd035)}
 
-[data-theme=orbita] .copy-btn:hover,[data-theme=orbita] .copy-btn:focus-visible{color:var(--neon-mint);opacity:1}
+[data-theme=neo] .copy-btn:hover,[data-theme=neo] .copy-btn:focus-visible{color:var(--neon-mint);opacity:1}
 
-[data-theme=orbita] .code-status i{background:var(--neon-mint);box-shadow:0 0 6px #95ebd060}
+[data-theme=neo] .code-status i{background:var(--neon-mint);box-shadow:0 0 6px #95ebd060}
 
-[data-theme=orbita] .terminal code>span{color:var(--neon-mint);text-shadow:0 0 7px #95ebd040}
+[data-theme=neo] .terminal code>span{color:var(--neon-mint);text-shadow:0 0 7px #95ebd040}
 
-[data-theme=orbita] .preview-panel{border-color:#829a9b70;box-shadow:0 0 24px #8bbda310,0 8px 30px #0002}
+[data-theme=neo] .preview-panel{border-color:#829a9b70;box-shadow:0 0 24px #8bbda310,0 8px 30px #0002}
 
-[data-theme=orbita] .morph-shape{box-shadow:inset 0 0 20px #9fc9b10c,0 0 17px #9fc9b122,0 0 45px #9fc9b10e}
+[data-theme=neo] .morph-shape{box-shadow:inset 0 0 20px #9fc9b10c,0 0 17px #9fc9b122,0 0 45px #9fc9b10e}
 
-[data-theme=orbita] .live-dot{background:var(--neon-mint);box-shadow:0 0 5px #95ebd070,0 0 10px #95ebd025}
+[data-theme=neo] .live-dot{background:var(--neon-mint);box-shadow:0 0 5px #95ebd070,0 0 10px #95ebd025}
 
-[data-theme=orbita] .player-controls input{background:linear-gradient(to right,#95ebd0ba var(--progress,0%),#4a536b var(--progress,0%))}
+[data-theme=neo] .player-controls input{background:linear-gradient(to right,#95ebd0ba var(--progress,0%),#4a536b var(--progress,0%))}
 
-[data-theme=orbita] .play-button{box-shadow:inset 0 1px 0 #edffedb0,0 0 11px #a9d4af2b}
+[data-theme=neo] .play-button{box-shadow:inset 0 1px 0 #edffedb0,0 0 11px #a9d4af2b}
 
-[data-theme=orbita] .concept-grid article{transition:border-color .2s,box-shadow .2s}
+[data-theme=neo] .concept-grid article{transition:border-color .2s,box-shadow .2s}
 
-[data-theme=orbita] .concept-grid article:hover{border-color:#7784b26b;box-shadow:0 0 20px #949ce50c}
+[data-theme=neo] .concept-grid article:hover{border-color:#7784b26b;box-shadow:0 0 20px #949ce50c}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 *,*::before,*::after{transition:none!important;animation:none!important}
@@ -499,15 +499,15 @@ body[data-theme=orbita]{--neon-mint:#95ebd0;--neon-lilac:#bdaaff;background:radi
 html{scroll-padding-top:76px}
 }
 
-/* Órbita: open canvas, glass panels with smooth light and selective neon edges. */
-body[data-theme=orbita]{
+/* Neo: open canvas, glass panels with smooth light and selective neon edges. */
+body[data-theme=neo]{
   --glass-radius:12px;
   --glass-edge-lilac:#cbbaff;
   --glass-edge-mint:#a6f6d5;
   --glass-edge-coral:#f5ae96;
 }
-[data-theme=orbita] .site-shell{max-width:1270px}
-[data-theme=orbita] .lesson-layout{
+[data-theme=neo] .site-shell{max-width:1270px}
+[data-theme=neo] .lesson-layout{
   display:block;
   padding:0;
   border:0;
@@ -517,27 +517,27 @@ body[data-theme=orbita]{
   backdrop-filter:none;
   overflow:visible;
 }
-[data-theme=orbita] .lab-grid{gap:26px}
-[data-theme=orbita] .code-panel,
-[data-theme=orbita] .preview-panel{
+[data-theme=neo] .lab-grid{gap:26px}
+[data-theme=neo] .code-panel,
+[data-theme=neo] .preview-panel{
   position:relative;
   border:1px solid transparent;
   border-radius:var(--glass-radius);
   isolation:isolate;
 }
-[data-theme=orbita] .code-panel{
+[data-theme=neo] .code-panel{
   background:linear-gradient(#151b28,#151b28) padding-box,
     linear-gradient(135deg,#e4dcffc9 0%,#a69aff9c 14%,#5b65804d 36%,#3e50663d 62%,#7ccbb4a8 89%,#a6f6d5c7 100%) border-box;
   box-shadow:0 0 0 3px #a79df916,-5px -4px 25px #a79df91a,6px 5px 25px #8dd8be10,0 15px 34px #080d192e;
 }
-[data-theme=orbita] .preview-panel{
+[data-theme=neo] .preview-panel{
   background:linear-gradient(#222b3d,#222b3d) padding-box,
     linear-gradient(135deg,#c7ffebcc 0%,#8ad8bfa6 14%,#526c744d 36%,#434a6f3d 62%,#a499eab0 89%,#d2c9ffc9 100%) border-box;
   box-shadow:0 0 0 3px #9bcbbb14,-5px -4px 25px #9ae6c917,6px 5px 25px #b2a3f516,0 15px 34px #080d192e;
 }
 /* Short bright edge segments behave like reflected light, not a uniform neon frame. */
-[data-theme=orbita] .code-panel::before,
-[data-theme=orbita] .preview-panel::before{
+[data-theme=neo] .code-panel::before,
+[data-theme=neo] .preview-panel::before{
   content:"";
   position:absolute;
   z-index:2;
@@ -549,12 +549,12 @@ body[data-theme=orbita]{
   background:linear-gradient(90deg,transparent 0%,#efe7ff26 7%,#efe7ffcc 22%,#c2b4ff8c 50%,transparent 100%);
   filter:drop-shadow(0 1px 4px #b8a7ff70);
 }
-[data-theme=orbita] .preview-panel::before{
+[data-theme=neo] .preview-panel::before{
   background:linear-gradient(90deg,transparent 0%,#d9fff129 7%,#d9fff1dd 22%,#95ebd099 50%,transparent 100%);
   filter:drop-shadow(0 1px 4px #95ebd066);
 }
-[data-theme=orbita] .code-panel .panel-bar,
-[data-theme=orbita] .preview-panel .panel-bar{
+[data-theme=neo] .code-panel .panel-bar,
+[data-theme=neo] .preview-panel .panel-bar{
   height:43px;
   border-bottom:1px solid #9ba8d32e;
   box-shadow:none;
@@ -562,22 +562,22 @@ body[data-theme=orbita]{
     radial-gradient(ellipse at 100% 110%,#95ebd017,transparent 60%),
     linear-gradient(110deg,#30364c,#283248);
 }
-[data-theme=orbita] .preview-panel .panel-bar{
+[data-theme=neo] .preview-panel .panel-bar{
   background:radial-gradient(ellipse at 8% -35%,#95ebd047,transparent 72%),
     radial-gradient(ellipse at 100% 110%,#b79bff30,transparent 60%),
     linear-gradient(110deg,#2d3b47,#2d334a);
 }
-[data-theme=orbita] .code-panel .panel-bar::after{content:none}
-[data-theme=orbita] .code-status{
+[data-theme=neo] .code-panel .panel-bar::after{content:none}
+[data-theme=neo] .code-status{
   background:radial-gradient(ellipse at 100% 130%,#95ebd017,transparent 65%),#192131;
   border-top-color:#91a3ba21;
 }
-[data-theme=orbita] .player-controls{
+[data-theme=neo] .player-controls{
   background:radial-gradient(ellipse at 90% 150%,#bdaaff2b,transparent 70%),linear-gradient(115deg,#2c3d46,#2c354a);
   border-top-color:#92b0ba2b;
 }
-[data-theme=orbita] .concept-grid{gap:23px}
-[data-theme=orbita] .concept-grid article{
+[data-theme=neo] .concept-grid{gap:23px}
+[data-theme=neo] .concept-grid article{
   --card-light:174,140,250;
   --card-edge:var(--glass-edge-lilac);
   --card-base:#252c40;
@@ -589,9 +589,9 @@ body[data-theme=orbita]{
   box-shadow:0 0 0 3px rgba(var(--card-light),.055),-4px -4px 25px rgba(var(--card-light),.075),0 12px 28px #080d1924;
   transition:box-shadow .2s;
 }
-[data-theme=orbita] .concept-grid article:nth-child(2){--card-light:121,231,180;--card-edge:var(--glass-edge-mint);--card-base:#26363b}
-[data-theme=orbita] .concept-grid article:nth-child(3){--card-light:238,151,124;--card-edge:var(--glass-edge-coral);--card-base:#322e3e}
-[data-theme=orbita] .concept-grid article::before{
+[data-theme=neo] .concept-grid article:nth-child(2){--card-light:121,231,180;--card-edge:var(--glass-edge-mint);--card-base:#26363b}
+[data-theme=neo] .concept-grid article:nth-child(3){--card-light:238,151,124;--card-edge:var(--glass-edge-coral);--card-base:#322e3e}
+[data-theme=neo] .concept-grid article::before{
   content:"";
   position:absolute;
   pointer-events:none;
@@ -602,13 +602,13 @@ body[data-theme=orbita]{
   background:linear-gradient(90deg,transparent 0%,rgba(var(--card-light),.15) 7%,var(--card-edge) 22%,rgba(var(--card-light),.55) 50%,transparent 100%);
   filter:drop-shadow(0 1px 4px rgba(var(--card-light),.4));
 }
-[data-theme=orbita] .concept-grid article:hover{
+[data-theme=neo] .concept-grid article:hover{
   border-color:transparent;
   box-shadow:0 0 0 3px rgba(var(--card-light),.08),-4px -4px 30px rgba(var(--card-light),.11),0 12px 28px #080d1933;
 }
-[data-theme=orbita] .concept-grid .concept-symbol{color:var(--card-edge);text-shadow:0 0 14px rgba(var(--card-light),.23)}
-[data-theme=orbita] .terminal,
-[data-theme=orbita] .tip{
+[data-theme=neo] .concept-grid .concept-symbol{color:var(--card-edge);text-shadow:0 0 14px rgba(var(--card-light),.23)}
+[data-theme=neo] .terminal,
+[data-theme=neo] .tip{
   border:1px solid transparent;
   border-radius:9px;
   background:radial-gradient(ellipse at 0% -10%,#95ebd016,transparent 70%) padding-box,
@@ -616,13 +616,13 @@ body[data-theme=orbita]{
     linear-gradient(120deg,#95ebd075,#7382a63d 40%,#505f7633 75%,#bdaaff5e) border-box;
   box-shadow:-3px -2px 18px #95ebd008,0 7px 20px #080d1917;
 }
-[data-theme=orbita] .tip{
+[data-theme=neo] .tip{
   background:radial-gradient(ellipse at 0% -10%,#95ebd012,transparent 70%) padding-box,
     linear-gradient(120deg,#243338,#222c36) padding-box,
     linear-gradient(120deg,#95ebd063,#6e9a8c33 40%,#3b564b2b 75%,#8fbda140) border-box;
 }
 /* Lesson navigation: quiet indigo glass, with sage light marking the current step. */
-[data-theme=orbita] .sidebar{
+[data-theme=neo] .sidebar{
   padding:0;
   border:1px solid #8a91bb30;
   border-radius:12px;
@@ -631,7 +631,7 @@ body[data-theme=orbita]{
   box-shadow:inset 0 1px 0 #d4d8f50a,0 6px 22px #080d191f;
   backdrop-filter:blur(18px);
 }
-[data-theme=orbita] .sidebar::before{
+[data-theme=neo] .sidebar::before{
   content:"";
   position:absolute;
   pointer-events:none;
@@ -641,14 +641,14 @@ body[data-theme=orbita]{
   height:1px;
   background:linear-gradient(90deg,transparent,#b5aff230 35%,#b5aff21a 70%,transparent);
 }
-[data-theme=orbita] .sidebar nav{
+[data-theme=neo] .sidebar nav{
   gap:5px;
   padding:6px;
   border-radius:11px;
   align-items:stretch;
   box-shadow:none;
 }
-[data-theme=orbita] .lesson-link{
+[data-theme=neo] .lesson-link{
   position:relative;
   align-items:center;
   gap:12px;
@@ -661,8 +661,8 @@ body[data-theme=orbita]{
   box-shadow:none;
   transition:background .2s,color .2s,box-shadow .2s;
 }
-[data-theme=orbita] .lesson-link span:last-child{font-weight:550}
-[data-theme=orbita] .lesson-link small{
+[data-theme=neo] .lesson-link span:last-child{font-weight:550}
+[data-theme=neo] .lesson-link small{
   display:block;
   margin-top:4px;
   color:#7f899f;
@@ -671,7 +671,7 @@ body[data-theme=orbita]{
   font-weight:400;
   line-height:1.4;
 }
-[data-theme=orbita] .lesson-no{
+[data-theme=neo] .lesson-no{
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -687,24 +687,24 @@ body[data-theme=orbita]{
   font-size:9px;
   font-variant-numeric:tabular-nums;
 }
-[data-theme=orbita] .lesson-link:not(.active):hover{
+[data-theme=neo] .lesson-link:not(.active):hover{
   border-color:transparent;
   color:#e3e0ee;
   background:radial-gradient(ellipse at 30% -40%,#b5aff218,transparent 80%),#b5aff206;
   box-shadow:inset 0 1px 0 #b5aff20a;
 }
-[data-theme=orbita] .lesson-link:not(.active):hover .lesson-no{
+[data-theme=neo] .lesson-link:not(.active):hover .lesson-no{
   border-color:#b5aff238;
   color:#c5bced;
 }
-[data-theme=orbita] .lesson-link.active{
+[data-theme=neo] .lesson-link.active{
   border-color:transparent;
   background:radial-gradient(ellipse at 14% -35%,#9bd8b72b,transparent 76%),
     linear-gradient(120deg,#2b413f80,#2831476b);
   box-shadow:inset 0 1px 0 #c4f0d90a,0 3px 12px #080d191c;
   color:#d4e8db;
 }
-[data-theme=orbita] .lesson-link.active::before{
+[data-theme=neo] .lesson-link.active::before{
   content:"";
   position:absolute;
   inset:-1px;
@@ -717,7 +717,7 @@ body[data-theme=orbita]{
   -webkit-mask-composite:xor;
   mask-composite:exclude;
 }
-[data-theme=orbita] .lesson-link.active::after{
+[data-theme=neo] .lesson-link.active::after{
   content:"";
   position:absolute;
   pointer-events:none;
@@ -728,32 +728,32 @@ body[data-theme=orbita]{
   background:linear-gradient(90deg,transparent,#9bd8b770 30%,#8bbda347 65%,transparent);
   filter:drop-shadow(0 0 4px #95ebd029);
 }
-[data-theme=orbita] .lesson-link.active small{color:#96afa6}
-[data-theme=orbita] .lesson-link.active .lesson-no{
+[data-theme=neo] .lesson-link.active small{color:#96afa6}
+[data-theme=neo] .lesson-link.active .lesson-no{
   border-color:#8bbda35c;
   background:radial-gradient(circle at 30% 10%,#b3dfc61c,#8bbda314 70%);
   color:#bce8cf;
   box-shadow:inset 0 1px 0 #ddffed17,0 0 10px #8bbda310;
   text-shadow:none;
 }
-[data-theme=orbita] .lesson-link:focus-visible{
+[data-theme=neo] .lesson-link:focus-visible{
   outline:2px solid var(--neon-mint);
   outline-offset:2px;
 }
 @media(max-width:900px){
-  [data-theme=orbita] .lesson-link{min-height:50px;gap:9px;padding:10px}
-  [data-theme=orbita] .lesson-link small{display:none}
-  [data-theme=orbita] .lesson-no{flex-basis:23px;height:23px}
+  [data-theme=neo] .lesson-link{min-height:50px;gap:9px;padding:10px}
+  [data-theme=neo] .lesson-link small{display:none}
+  [data-theme=neo] .lesson-no{flex-basis:23px;height:23px}
 }
 @media(max-width:650px){
-  [data-theme=orbita] .sidebar nav{padding:6px;gap:5px}
-  [data-theme=orbita] .lesson-link{min-height:48px;padding:9px 8px;gap:9px}
-  [data-theme=orbita] .lesson-no{flex-basis:22px;height:22px;font-size:8px}
-  [data-theme=orbita] .lesson-link.active::after{left:39px;width:42%}
+  [data-theme=neo] .sidebar nav{padding:6px;gap:5px}
+  [data-theme=neo] .lesson-link{min-height:48px;padding:9px 8px;gap:9px}
+  [data-theme=neo] .lesson-no{flex-basis:22px;height:22px;font-size:8px}
+  [data-theme=neo] .lesson-link.active::after{left:39px;width:42%}
 }
 /* Action controls share the dark glass and restrained sage light of the cards. */
-[data-theme=orbita] .primary-btn,
-[data-theme=orbita] .play-button{
+[data-theme=neo] .primary-btn,
+[data-theme=neo] .play-button{
   border:1px solid transparent;
   border-radius:8px;
   color:#c5e6d4;
@@ -764,10 +764,10 @@ body[data-theme=orbita]{
   filter:none;
   transition:background .2s,box-shadow .2s,color .2s,transform .2s;
 }
-[data-theme=orbita] .primary-btn svg{color:#a4d9bc}
-[data-theme=orbita] .play-button{width:30px;height:30px}
-[data-theme=orbita] .primary-btn:hover,
-[data-theme=orbita] .play-button:hover{
+[data-theme=neo] .primary-btn svg{color:#a4d9bc}
+[data-theme=neo] .play-button{width:30px;height:30px}
+[data-theme=neo] .primary-btn:hover,
+[data-theme=neo] .play-button:hover{
   color:#d8f3e3;
   background:radial-gradient(ellipse at 14% -30%,#9bd8b738,transparent 78%) padding-box,
     linear-gradient(125deg,#304b47,#293847) padding-box,
@@ -775,29 +775,29 @@ body[data-theme=orbita]{
   box-shadow:inset 0 1px 0 #daf7e714,0 4px 12px #080d1933,0 0 16px #8bbda312;
   filter:none;
 }
-[data-theme=orbita] .primary-btn:active,
-[data-theme=orbita] .play-button:active{
+[data-theme=neo] .primary-btn:active,
+[data-theme=neo] .play-button:active{
   transform:translateY(0);
   box-shadow:inset 0 2px 5px #080d1933,0 0 9px #8bbda30c;
 }
-[data-theme=orbita] .primary-btn:focus-visible,
-[data-theme=orbita] .play-button:focus-visible{
+[data-theme=neo] .primary-btn:focus-visible,
+[data-theme=neo] .play-button:focus-visible{
   outline:2px solid #9bd8b7;
   outline-offset:3px;
 }
 /* Logo: the same smooth glass light, with a continuous graduated neon outline. */
-[data-theme=orbita] .hero-circle{
+[data-theme=neo] .hero-circle{
   border:1px solid transparent;
   background:radial-gradient(circle at 26% 18%,#baffdf9c 0%,#7bdbb270 31%,#459d7d4d 64%,#7ec6a866 100%);
   box-shadow:inset 0 0 28px #95ebd012,0 0 14px #95ebd01a,0 0 34px #95ebd015,0 0 64px #95ebd00c;
 }
-[data-theme=orbita] .hero-square{
+[data-theme=neo] .hero-square{
   border:1px solid transparent;
   background:radial-gradient(ellipse at 15% 8%,#d4c2ffa3 0%,#a18aeb78 32%,#695ac251 66%,#9c83db66 100%);
   box-shadow:inset 0 0 28px #bdaaff13,0 0 14px #bdaaff1a,0 0 34px #bdaaff15,0 0 64px #bdaaff0c;
 }
-[data-theme=orbita] .hero-circle::after,
-[data-theme=orbita] .hero-square::after{
+[data-theme=neo] .hero-circle::after,
+[data-theme=neo] .hero-square::after{
   content:"";
   position:absolute;
   inset:-1px;
@@ -810,17 +810,17 @@ body[data-theme=orbita]{
   -webkit-mask-composite:xor;
   mask-composite:exclude;
 }
-[data-theme=orbita] .hero-square::after{
+[data-theme=neo] .hero-square::after{
   background:linear-gradient(135deg,#eee6fff0 0%,#c6aaffbd 20%,#9a8ad024 46%,#9385c91c 70%,#d1c2ffbd 100%);
 }
-[data-theme=orbita] .hero-triangle{
+[data-theme=neo] .hero-triangle{
   background:none;
   clip-path:none;
   overflow:visible;
   filter:drop-shadow(0 0 9px #f5ae9633) drop-shadow(0 0 24px #df866b1f) drop-shadow(0 0 42px #f5ae960d);
 }
-@media(max-width:900px){[data-theme=orbita] .lab-grid{gap:22px}}
+@media(max-width:900px){[data-theme=neo] .lab-grid{gap:22px}}
 @media(max-width:650px){
-  [data-theme=orbita] .lab-grid{gap:23px}
-  [data-theme=orbita] .concept-grid{gap:17px}
+  [data-theme=neo] .lab-grid{gap:23px}
+  [data-theme=neo] .concept-grid{gap:17px}
 }
