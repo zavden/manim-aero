@@ -751,17 +751,39 @@ body[data-theme=orbita]{
   [data-theme=orbita] .lesson-no{flex-basis:22px;height:22px;font-size:8px}
   [data-theme=orbita] .lesson-link.active::after{left:39px;width:42%}
 }
-/* Smooth glass light on the remaining controls replaces the old split reflection. */
-[data-theme=orbita] .primary-btn{
-  background:radial-gradient(ellipse at 12% -35%,#edfff3c9,transparent 75%),linear-gradient(125deg,#a2dfc1,#7fc4a6 75%,#93d1b5);
-  border-color:#cbf0ddb3;
-  box-shadow:inset 0 1px 0 #effff259,0 0 15px #a4d3ae20,0 4px 20px #8bbda314;
-}
-[data-theme=orbita] .primary-btn:hover{box-shadow:inset 0 1px 0 #effff280,0 0 22px #a4d3ae2e,0 5px 24px #8bbda320}
+/* Action controls share the dark glass and restrained sage light of the cards. */
+[data-theme=orbita] .primary-btn,
 [data-theme=orbita] .play-button{
-  background:radial-gradient(circle at 25% 10%,#daf8e6,#8dd7b4 55%,#6caf90);
-  border-color:#c2edda9c;
-  box-shadow:inset 0 1px 0 #edffed66,0 0 11px #a9d4af2b;
+  border:1px solid transparent;
+  border-radius:8px;
+  color:#c5e6d4;
+  background:radial-gradient(ellipse at 14% -30%,#9bd8b72b,transparent 78%) padding-box,
+    linear-gradient(125deg,#2b4142,#25323e) padding-box,
+    linear-gradient(125deg,#b8e5cd80,#8bbda347 42%,#a39cce3d 75%,#8bbda34d) border-box;
+  box-shadow:inset 0 1px 0 #daf7e70a,0 3px 10px #080d192e,0 0 14px #8bbda309;
+  filter:none;
+  transition:background .2s,box-shadow .2s,color .2s,transform .2s;
+}
+[data-theme=orbita] .primary-btn svg{color:#a4d9bc}
+[data-theme=orbita] .play-button{width:30px;height:30px}
+[data-theme=orbita] .primary-btn:hover,
+[data-theme=orbita] .play-button:hover{
+  color:#d8f3e3;
+  background:radial-gradient(ellipse at 14% -30%,#9bd8b738,transparent 78%) padding-box,
+    linear-gradient(125deg,#304b47,#293847) padding-box,
+    linear-gradient(125deg,#c1efd699,#8bbda35c 42%,#b5aff252 75%,#8bbda366) border-box;
+  box-shadow:inset 0 1px 0 #daf7e714,0 4px 12px #080d1933,0 0 16px #8bbda312;
+  filter:none;
+}
+[data-theme=orbita] .primary-btn:active,
+[data-theme=orbita] .play-button:active{
+  transform:translateY(0);
+  box-shadow:inset 0 2px 5px #080d1933,0 0 9px #8bbda30c;
+}
+[data-theme=orbita] .primary-btn:focus-visible,
+[data-theme=orbita] .play-button:focus-visible{
+  outline:2px solid #9bd8b7;
+  outline-offset:3px;
 }
 /* Logo: the same smooth glass light, with a continuous graduated neon outline. */
 [data-theme=orbita] .hero-circle{
