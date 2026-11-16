@@ -478,6 +478,21 @@ body[data-theme=orbita]{--neon-mint:#95ebd0;--neon-lilac:#bdaaff;background:radi
 
 .design-label span{font-weight:400;color:#8e9aa6;margin-left:4px}
 
+.design-label [data-current-theme]{font-weight:600;color:inherit;margin-left:0}
+.toolbar-actions{display:flex;align-items:center;gap:20px}
+.theme-picker{display:flex;align-items:center;gap:3px;padding:3px;border:1px solid #a5afcc26;border-radius:8px;background:#0e152342}
+.theme-picker button{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:5px 10px;min-height:29px;border:1px solid transparent;border-radius:5px;font-size:10px;color:#9ca7be;transition:background .2s,color .2s}
+.theme-picker button:hover{background:#b5aff20c;color:#e8e5f4}
+.theme-picker button[aria-pressed=true]{background:radial-gradient(ellipse at 15% 0%,#9bd8b71f,transparent 85%),#263b3b70;border-color:#8bbda347;color:#c8e7d6;box-shadow:inset 0 1px 0 #d0f7e012}
+@media(max-width:650px){
+  .toolbar-actions{gap:10px}
+  .theme-picker{padding:2px}
+  .theme-picker button{padding:4px 8px;font-size:10px}
+  .toolbar-actions .style-trigger{padding:6px}
+  .toolbar-actions .style-trigger span{display:none}
+}
+@media(max-width:380px){.design-label>span:last-child{display:none}}
+
 @media(max-width:650px){.design-toolbar{padding:0 18px}
 .design-label{font-size:10px}
 .style-trigger{font-size:10px}

@@ -1,0 +1,75 @@
+/* 04 · Prisma — a refracted desktop window */
+body[data-theme=old]{--radius:8px;--bg:#cdcddf;--surface:#f4f3fa;--text:#30334e;--accent:#55598e;--muted:#818099;--border:#d2d0e3;--panel:#efedf7;--inline:#8984b312;--code:#25283b;background:linear-gradient(125deg,transparent 12%,#ffffff33 12%,#ffffff08 27%,transparent 27%),radial-gradient(ellipse at 10% 10%,#eee0e7,transparent 55%),radial-gradient(ellipse at 95% 100%,#b2bbc7,transparent 60%),#bfc1da;background-attachment:fixed}
+[data-theme=old] .site-shell{padding:0 37px;max-width:1430px}
+[data-theme=old] .site-header{height:103px;color:#4a4b6b}
+[data-theme=old] .header-caption{color:#71738c}
+[data-theme=old] .window-caption{height:38px;display:flex;align-items:center;justify-content:space-between;font-size:10px;padding:0 15px;background:linear-gradient(110deg,#ffffffb0,#e5e3f480 33%,#ffffff30 33%,#c7c9e060 60%,#ece9f399);border:1px solid #f8f6ff;border-bottom:0;border-radius:10px 10px 0 0;box-shadow:0 0 0 1px #8589b599,inset 0 1px 0 #fff;color:#4e5376;text-shadow:0 1px 6px white}
+[data-theme=old] .window-caption>span:last-child{font-size:12px;letter-spacing:7px;opacity:.6}
+[data-theme=old] .lesson-layout{border:7px solid #eceafa70;border-top-width:4px;border-radius:0 0 10px 10px;box-shadow:0 0 0 1px #8589b599,0 15px 50px #4e527d33;background:#cccde170;grid-template-columns:205px minmax(0,1fr)}
+[data-theme=old] .sidebar{background:linear-gradient(100deg,#e6e4f280,#e1e0efc0);border-color:#bbbdd6}
+[data-theme=old] .sidebar-title{color:#8182a1}
+[data-theme=old] .lesson-link{border-radius:5px}
+[data-theme=old] .lesson-link.active{background:linear-gradient(#f5f1ff,#d8d7ec 49%,#c3c4df 50%,#e0deef);border-color:#a6a6ca;color:#555985;box-shadow:inset 0 1px 0 #fff,0 2px 4px #5a5c8820}
+[data-theme=old] .course-note{border-color:#bfbdd5;background:linear-gradient(130deg,#fff5,#bcb9d422);color:#777895}
+[data-theme=old] .note-orb{background:linear-gradient(#fbf8ff,#cac9e0 49%,#b0b2d1 50%,#dad7ed);border-color:#aaaacb;color:#666a98}
+[data-theme=old] .course-line{background:linear-gradient(90deg,#9496b6 25%,#d2d0e1 25%)}
+[data-theme=old] .breadcrumbs{background:linear-gradient(#fff,#e9e7f3 48%,#deddeb 50%,#f0edf7);border-bottom-color:#c5c5db}
+[data-theme=old] .lesson-hero{background:radial-gradient(ellipse at 100% 0,#e9e6f0,transparent 70%);padding-top:38px}
+[data-theme=old] .hero-text h1{font-weight:450}
+[data-theme=old] .hero-square{background:linear-gradient(130deg,#e3e1ffaa,#9697c399 49%,#7175a799 50%,#a9abd4dd);border-color:#c7c5e1;box-shadow:inset 0 1px 0 white,0 14px 30px #5b5c9325}
+[data-theme=old] .primary-btn{background:linear-gradient(#f5f0ff,#dad9f2 49%,#bdbfe0 50%,#e4dff4);border:1px solid #a2a2c9;color:#4f5585;box-shadow:inset 0 1px 0 #fff,0 3px 6px #4b4f7e20;border-radius:5px}
+[data-theme=old] .panel-bar{background:linear-gradient(#ffffff1c,#ffffff04 48%,#00000007 50%,#ffffff09)}
+[data-theme=old] .code-panel{border-color:#6b6f93;box-shadow:0 0 0 3px #e2e1ed,0 3px 7px #30334d15}
+[data-theme=old] .preview-panel{border-color:#bfc1d9;box-shadow:0 0 0 3px #e9e7f2}
+[data-theme=old] .preview-panel .panel-bar{background:linear-gradient(#faf7ff,#e3e0f1 49%,#d8d5e8 50%,#eeeaf8);border-color:#c5c5db;color:#6c6e98}
+[data-theme=old] .preview-stage{background:radial-gradient(ellipse,#e1e3ef,#efedf7 70%)}
+[data-theme=old] .player-controls{background:linear-gradient(#fbf8ff,#e3e1ee 49%,#d6d4e6 50%,#e8e6f2)}
+[data-theme=old] .play-button{background:linear-gradient(#ffffff,#d1d2ed 49%,#b5b9dc 50%,#ddd9ed);border-color:#a2a8c9;color:#606795}
+[data-theme=old] .terminal{background:linear-gradient(#f9f7fc,#eeebf5);border-color:#cfccdf}
+[data-theme=old] .tip{background:linear-gradient(#f2f6ef,#e8ede6);border-color:#ccd6c8}
+[data-theme=old] .concept-grid article{background:linear-gradient(#fcfaff,#edebf4);border-color:#d2cfe2;box-shadow:inset 0 1px 0 #fff,0 2px 4px #5150770a}
+[data-theme=old] .complete-button{background:linear-gradient(#fff,#e8e4f5 49%,#d7d4e8 50%,#efebf5);border-color:#c2bed8;color:#696b96}
+
+/* Compatibility with the shared lesson and its persistent theme controls. */
+body[data-theme=old]{color-scheme:light}
+[data-theme=old] .brand-mark i{background:#777aaf}
+[data-theme=old] .brand-mark b{background:#8baf9b}
+[data-theme=old] .brand-mark em{border-bottom-color:#cd7f66}
+[data-theme=old] .design-toolbar{
+  color:#4e5275;
+  border-bottom-color:#aaacc7;
+  background:linear-gradient(#f7f4ffed,#e2dff0e8 48%,#cdcee4ed 50%,#e8e5f2ed);
+  box-shadow:inset 0 1px 0 #fff,0 2px 7px #53567b20;
+}
+[data-theme=old] .design-label>span:last-child{color:#777b97}
+[data-theme=old] .theme-picker{border-color:#b4b3cf;background:linear-gradient(#cecee149,#f6f3fc70);box-shadow:inset 0 1px 3px #5f628a1a}
+[data-theme=old] .theme-picker button{color:#64678a}
+[data-theme=old] .theme-picker button:hover{color:#404774;background:#f9f6ff77}
+[data-theme=old] .theme-picker button[aria-pressed=true]{border-color:#aaa9ce;color:#4f5585;background:linear-gradient(#fbf8ff,#e1dff2 49%,#c9cae6 50%,#eee8f9);box-shadow:inset 0 1px 0 white,0 1px 3px #55577d1a}
+[data-theme=old] .hero-triangle path{display:none}
+[data-theme=old] .window-caption{backdrop-filter:blur(16px)}
+[data-theme=old] .complete-button.completed{background:linear-gradient(#f2f8ee,#d1e1cf);border-color:#a9bea7;color:#4c6d4d}
+[data-theme=old] .style-dialog{box-shadow:0 0 0 5px #e5e1f04d,0 25px 70px #30365855}
+[data-theme=old] .style-dialog::backdrop{background:#3a3e6266;backdrop-filter:blur(6px)}
+[data-theme=old] .dialog-top{background:linear-gradient(#faf7ff,#e3e0f1 49%,#d8d5e8 50%,#eeeaf8);border-color:#c5c5db}
+/* Original Prisma breakpoints, preserved alongside the unchanged dark layout. */
+@media(max-width:1150px){
+  [data-theme=old] .site-shell{padding:0 22px}
+  [data-theme=old] .lesson-layout{grid-template-columns:180px minmax(0,1fr)}
+}
+@media(max-width:900px){
+  [data-theme=old] .lesson-layout{grid-template-columns:160px minmax(0,1fr)}
+}
+@media(max-width:650px){
+  [data-theme=old] .site-shell{padding:0 12px}
+  [data-theme=old] .site-header{height:88px}
+  [data-theme=old] .window-caption{height:34px;font-size:8px;padding:0 10px}
+  [data-theme=old] .window-caption>span:last-child{font-size:8px;letter-spacing:3px}
+  [data-theme=old] .lesson-layout{display:block;border-width:5px;border-top-width:3px}
+  [data-theme=old] .lesson-hero{padding:28px 17px 29px}
+  [data-theme=old] .hero-text h1{font-size:41px}
+  [data-theme=old] .work-section,[data-theme=old] .concepts{padding-left:17px;padding-right:17px}
+  [data-theme=old] .breadcrumbs{padding:14px 17px}
+  [data-theme=old] .hero-text .eyebrow{font-size:6px}
+  [data-theme=old] .practice{margin-left:17px;margin-right:17px}
+}
