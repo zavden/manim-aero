@@ -4,6 +4,21 @@ A Manim tutorial website with two themes: **Neo**, a dark Aero design with soft 
 
 The first visit uses Neo regardless of the system theme. The selector remembers the choice in the browser. Switching themes preserves the lesson, completion status, and animation state. Previous dark-theme preferences remain compatible.
 
+## Documentation
+
+Another agent can continue without access to the original conversation. Start with [AGENTS.md](AGENTS.md) and follow the documentation map:
+
+| Reference | Contents |
+| --- | --- |
+| [Continuity and decisions](docs/HANDOFF.md) | Approved direction, rejected variants, checkpoints, and the pending notebook task |
+| [Design system](docs/DESIGN_SYSTEM.md) | Neo/Old palettes, typography, layout, responsive rules, effects, and design constraints |
+| [Components](docs/COMPONENTS.md) | DOM/classes, states, events, accessibility hooks, and extension limits |
+| [Development](docs/DEVELOPMENT.md) | Runtime flow, persistence, validation, deployment context, and notebook integration planning |
+| [Reference tokens](docs/design-tokens.json) | Machine-readable values, source hashes, and known metadata differences |
+| [Material recipes](docs/material-recipes.css) | Exact CSS material excerpts for both themes; documentation only |
+
+The source CSS remains authoritative. The in-app style guide and its downloads are a summary, not a complete theme engine.
+
 ## Open
 
 Open `dist/index.html` directly in a browser. No installation or build step is required. `dist/orbita.html` preserves the original link and redirects to the main page. Legacy Spanish section links still work.

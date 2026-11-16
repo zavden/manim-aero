@@ -2,9 +2,20 @@
 
 ## Current request and stopping point
 
-The user approved the current website and asked to commit all pending work before compacting the conversation. After compaction, the user will provide a Jupyter notebook. Their next objective is to use this website as a framework that converts code and content authored in Jupyter into tutorial pages using the established styles.
+The user approved the current website, requested commits before compacting, and then asked for complete design documentation so another agent can continue independently. The design system, component contracts, implementation guide, token reference, and material recipes are now documented. After compaction, the user will provide a Jupyter notebook. Their next objective is to use this website as a framework that converts code and content authored in Jupyter into tutorial pages using the established styles.
 
 **No notebook has been provided yet. No notebook converter, notebook schema, or execution pipeline has been implemented or agreed upon.** Resume by inspecting the supplied notebook and its outputs before choosing the conversion approach. Do not start inventing a sample notebook or replacing the approved design while waiting.
+
+## Documentation map
+
+- [AGENTS.md](../AGENTS.md): agent entry point and repository conventions.
+- [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md): full visual specification and effective responsive values.
+- [COMPONENTS.md](COMPONENTS.md): markup, event/data hooks, state, and current limitations.
+- [DEVELOPMENT.md](DEVELOPMENT.md): runtime flow, verification, and notebook integration boundaries.
+- [design-tokens.json](design-tokens.json): reference values with source hashes.
+- [material-recipes.css](material-recipes.css): exact material declarations for Neo and Old, not loaded by the site.
+
+These documents distinguish approved behavior from implementation gaps and future proposals. In particular, the in-app Neo surface token differs from the runtime CSS; follow the documented source-of-truth notes rather than assuming the exported token file fully reproduces the theme.
 
 ## Active project
 
@@ -63,5 +74,6 @@ Still undecided: notebook conventions, whether conversion should execute cells, 
 - `90156c8`: default dark theme plus classic light Old theme.
 - `dcb537e`: dark glass primary and playback controls.
 - `d47806a`: English translation and dark-theme rename to Neo.
+- `082b3e1`: initial continuity note for the Jupyter stage.
 
 The latest documentation commit contains this handoff. Start the next stage from the current branch, not an earlier visual experiment.

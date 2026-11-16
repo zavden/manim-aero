@@ -1,0 +1,311 @@
+{
+  "reference_only": true,
+  "runtime_baseline_commit": "d47806a",
+  "description": "Documentation snapshot. Not imported by the website; the runtime CSS cascade remains authoritative.",
+  "source_files_sha256": {
+    "dist/assets/styles.css": "a6897a1b720f514edf3c24b62e19a2a8897ab28a2545f2419e1c4a7768365e83",
+    "dist/assets/old.css": "257ebb1803537a1bb0092e8d2e49220cd7aea5746a07863024f5e4889d385b5c",
+    "dist/assets/app.js": "a7ea0032c990ef8b557516c75227787c4a3b9acebf531f8fbc32aa3140c1ab93"
+  },
+  "default_theme": "neo",
+  "language": "en",
+  "themes": {
+    "neo": {
+      "runtime_css_variables": {
+        "--bg": "#191E29",
+        "--surface": "#202637",
+        "--text": "#EAE8E3",
+        "--muted": "#A1A9BE",
+        "--accent": "#B5AFF2",
+        "--border": "#3D455B",
+        "--radius": "12px",
+        "--panel": "#232B3D",
+        "--code": "#151B28",
+        "--inline": "#FFFFFF0C",
+        "--neon-mint": "#95EBD0",
+        "--neon-lilac": "#BDAAFF",
+        "--glass-radius": "12px",
+        "--glass-edge-lilac": "#CBBAFF",
+        "--glass-edge-mint": "#A6F6D5",
+        "--glass-edge-coral": "#F5AE96"
+      },
+      "semantic_accents": {
+        "sage": "#8BBDA3",
+        "coral": "#DF866B",
+        "hero_emphasis": "#9BD8B7",
+        "action_text": "#C5E6D4",
+        "action_hover_text": "#D8F3E3"
+      },
+      "metadata_discrepancy": {
+        "surface_in_app_and_export": "#262D40",
+        "surface_in_runtime_css": "#202637"
+      },
+      "syntax": {
+        "plain": "#DCE5DC",
+        "keyword": "#BDAAFF",
+        "string": "#95EBD0",
+        "class_or_function": "#D8BE8B",
+        "number": "#E2A68D",
+        "self": "#A8BDCA",
+        "line_number": "#798C8F"
+      },
+      "layout": {
+        "shell_max_width_px": 1270,
+        "shell_padding_x_px": {
+          "above_900": 44,
+          "651_to_900": 28,
+          "up_to_650": 20
+        },
+        "lesson_navigation": "horizontal on desktop; collapsible two-column menu on mobile",
+        "outer_window_frame": false,
+        "lab_columns": {
+          "above_900": "1.2fr 1fr",
+          "651_to_900": "1fr 1fr",
+          "up_to_650": "1fr"
+        },
+        "lab_gap_px": {
+          "above_900": 26,
+          "651_to_900": 22,
+          "up_to_650": 23
+        },
+        "concept_columns": {
+          "above_650": 3,
+          "up_to_650": 1
+        },
+        "concept_gap_px": {
+          "above_650": 23,
+          "up_to_650": 17
+        }
+      },
+      "component_geometry_px": {
+        "panel_radius": 12,
+        "card_radius": 12,
+        "navigation_radius": 12,
+        "navigation_item_radius": 8,
+        "navigation_min_height_above_900": 60,
+        "navigation_min_height_651_to_900": 50,
+        "navigation_min_height_up_to_650": 48,
+        "button_radius": 8,
+        "play_size": [
+          30,
+          30
+        ],
+        "panel_header_height": 43,
+        "player_controls_height": 41
+      },
+      "type_px": {
+        "hero": {
+          "above_1150": 65,
+          "901_to_1150": 57,
+          "651_to_900": 50,
+          "up_to_650": 49
+        },
+        "code": {
+          "above_900": 12,
+          "up_to_900": 10
+        },
+        "section_heading": {
+          "above_650": 26,
+          "up_to_650": 23
+        },
+        "concept_title": 18
+      },
+      "cards": [
+        {
+          "role": "scene",
+          "light_rgb": [
+            174,
+            140,
+            250
+          ],
+          "base": "#252C40",
+          "edge": "#CBBAFF"
+        },
+        {
+          "role": "objects",
+          "light_rgb": [
+            121,
+            231,
+            180
+          ],
+          "base": "#26363B",
+          "edge": "#A6F6D5"
+        },
+        {
+          "role": "motion",
+          "light_rgb": [
+            238,
+            151,
+            124
+          ],
+          "base": "#322E3E",
+          "edge": "#F5AE96"
+        }
+      ],
+      "logo": {
+        "circle_size_px": [
+          144,
+          144
+        ],
+        "square_size_px": [
+          133,
+          133
+        ],
+        "triangle_viewbox": [
+          0,
+          0,
+          110,
+          100
+        ],
+        "square_rotation_deg": 10,
+        "triangle_rotation_deg": -9,
+        "outer_blur_circle_square_px": [
+          14,
+          34,
+          64
+        ],
+        "outer_blur_circle_square_alpha_hex": [
+          "1A",
+          "15",
+          "0C"
+        ],
+        "triangle_drop_shadow_px": [
+          9,
+          24,
+          42
+        ],
+        "triangle_drop_shadow_alpha_hex": [
+          "33",
+          "1F",
+          "0D"
+        ],
+        "labels": false,
+        "dashed_ellipse": false
+      }
+    },
+    "old": {
+      "runtime_css_variables": {
+        "--radius": "8px",
+        "--bg": "#CDCDDF",
+        "--surface": "#F4F3FA",
+        "--text": "#30334E",
+        "--accent": "#55598E",
+        "--muted": "#818099",
+        "--border": "#D2D0E3",
+        "--panel": "#EFEDF7",
+        "--inline": "#8984B312",
+        "--code": "#25283B"
+      },
+      "background_final_layer": "#BFC1DA",
+      "semantic_accents": {
+        "sage": "#8BAF9B",
+        "coral": "#CD7F66",
+        "window_frame": "#ECEAFA70",
+        "window_outline": "#8589B599",
+        "white_highlight": "#FFFFFF"
+      },
+      "syntax": {
+        "plain": "#DCE5DC",
+        "keyword": "#B6B3E7",
+        "string": "#A1C7AC",
+        "class_or_function": "#D8BE8B",
+        "number": "#E2A68D",
+        "self": "#A8BDCA",
+        "line_number": "#798C8F"
+      },
+      "layout": {
+        "shell_max_width_px": 1430,
+        "shell_padding_x_px": {
+          "above_1150": 37,
+          "651_to_1150": 22,
+          "up_to_650": 12
+        },
+        "sidebar_width_px": {
+          "above_1150": 205,
+          "901_to_1150": 180,
+          "651_to_900": 160
+        },
+        "lesson_navigation": "vertical on desktop; collapsible two-column menu on mobile",
+        "outer_window_frame": true,
+        "frame_border_px": {
+          "above_650": 7,
+          "up_to_650": 5
+        },
+        "frame_top_border_px": {
+          "above_650": 4,
+          "up_to_650": 3
+        },
+        "lab_columns": {
+          "above_1150": "1.35fr 1fr",
+          "901_to_1150": "1.25fr 1fr",
+          "up_to_900": "1fr"
+        },
+        "lab_gap_px": {
+          "above_1150": 16,
+          "651_to_1150": 12,
+          "up_to_650": 16
+        }
+      },
+      "component_geometry_px": {
+        "panel_radius": 8,
+        "card_radius": 7,
+        "button_radius": 5,
+        "play_size": [
+          25,
+          25
+        ],
+        "play_radius": "50%",
+        "panel_header_height": 38,
+        "window_caption_height": {
+          "above_650": 38,
+          "up_to_650": 34
+        }
+      },
+      "type_px": {
+        "hero": {
+          "at_least_1500": 55,
+          "1151_to_1499": 48,
+          "901_to_1150": 42,
+          "651_to_900": 46,
+          "up_to_650": 41
+        },
+        "code": {
+          "at_least_1500": 12,
+          "1151_to_1499": 10,
+          "901_to_1150": 9,
+          "651_to_900": 12,
+          "up_to_650": 10
+        }
+      },
+      "reflection_transition_percent": [
+        49,
+        50
+      ]
+    }
+  },
+  "shared": {
+    "font_body": "\"Segoe UI\", -apple-system, BlinkMacSystemFont, Arial, sans-serif",
+    "font_display": "Georgia, serif",
+    "font_code": "\"SFMono-Regular\", Consolas, \"Liberation Mono\", monospace",
+    "body_font_size_px": 15,
+    "body_line_height": 1.6,
+    "toolbar_height_px": 51,
+    "toolbar_z_index": 20,
+    "dialog_max_width_px": 580,
+    "dialog_max_height": "88vh",
+    "dialog_radius_px": 14,
+    "toast_z_index": 100,
+    "transition_seconds": 0.2,
+    "responsive_max_widths_px": [
+      1150,
+      900,
+      650,
+      380
+    ],
+    "responsive_min_widths_px": [
+      1500
+    ],
+    "card_rim_peak_percent": 22
+  },
+  "verification_scope": "Values read from the CSS cascade; desktop Chrome checked during design work. No comprehensive mobile/cross-browser/accessibility audit."
+}

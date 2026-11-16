@@ -1,0 +1,414 @@
+/*
+ * DOCUMENTATION SNAPSHOT — NOT LOADED BY THE WEBSITE.
+ * Runtime design baseline: d47806a.
+ * These are copied material declarations, not a standalone UI stylesheet.
+ * Shared structure, typography, SVG definitions and earlier cascade rules still live in dist/.
+ * Neo source SHA-256: a6897a1b720f514edf3c24b62e19a2a8897ab28a2545f2419e1c4a7768365e83
+ * Old source SHA-256: 257ebb1803537a1bb0092e8d2e49220cd7aea5746a07863024f5e4889d385b5c
+ * Update this snapshot after accepted material changes; see DESIGN_SYSTEM.md.
+ */
+
+body[data-theme=neo]{--neon-mint:#95ebd0;--neon-lilac:#bdaaff;background:radial-gradient(ellipse at 66% 7%,#7162c332,transparent 40%),radial-gradient(ellipse at 92% 35%,#8bbda30b,transparent 34%),radial-gradient(ellipse at 50% -10%,#50578b80,transparent 50%),#191e29;background-attachment:fixed}
+
+/* Neo: open canvas, glass panels with smooth light and selective neon edges. */
+body[data-theme=neo]{
+  --glass-radius:12px;
+  --glass-edge-lilac:#cbbaff;
+  --glass-edge-mint:#a6f6d5;
+  --glass-edge-coral:#f5ae96;
+}
+[data-theme=neo] .site-shell{max-width:1270px}
+[data-theme=neo] .lesson-layout{
+  display:block;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:none;
+  box-shadow:none;
+  backdrop-filter:none;
+  overflow:visible;
+}
+[data-theme=neo] .lab-grid{gap:26px}
+[data-theme=neo] .code-panel,
+[data-theme=neo] .preview-panel{
+  position:relative;
+  border:1px solid transparent;
+  border-radius:var(--glass-radius);
+  isolation:isolate;
+}
+[data-theme=neo] .code-panel{
+  background:linear-gradient(#151b28,#151b28) padding-box,
+    linear-gradient(135deg,#e4dcffc9 0%,#a69aff9c 14%,#5b65804d 36%,#3e50663d 62%,#7ccbb4a8 89%,#a6f6d5c7 100%) border-box;
+  box-shadow:0 0 0 3px #a79df916,-5px -4px 25px #a79df91a,6px 5px 25px #8dd8be10,0 15px 34px #080d192e;
+}
+[data-theme=neo] .preview-panel{
+  background:linear-gradient(#222b3d,#222b3d) padding-box,
+    linear-gradient(135deg,#c7ffebcc 0%,#8ad8bfa6 14%,#526c744d 36%,#434a6f3d 62%,#a499eab0 89%,#d2c9ffc9 100%) border-box;
+  box-shadow:0 0 0 3px #9bcbbb14,-5px -4px 25px #9ae6c917,6px 5px 25px #b2a3f516,0 15px 34px #080d192e;
+}
+/* Short bright edge segments behave like reflected light, not a uniform neon frame. */
+[data-theme=neo] .code-panel::before,
+[data-theme=neo] .preview-panel::before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  pointer-events:none;
+  top:0;
+  left:12px;
+  width:38%;
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,#efe7ff26 7%,#efe7ffcc 22%,#c2b4ff8c 50%,transparent 100%);
+  filter:drop-shadow(0 1px 4px #b8a7ff70);
+}
+[data-theme=neo] .preview-panel::before{
+  background:linear-gradient(90deg,transparent 0%,#d9fff129 7%,#d9fff1dd 22%,#95ebd099 50%,transparent 100%);
+  filter:drop-shadow(0 1px 4px #95ebd066);
+}
+[data-theme=neo] .code-panel .panel-bar,
+[data-theme=neo] .preview-panel .panel-bar{
+  height:43px;
+  border-bottom:1px solid #9ba8d32e;
+  box-shadow:none;
+  background:radial-gradient(ellipse at 8% -35%,#ae90ff5c,transparent 72%),
+    radial-gradient(ellipse at 100% 110%,#95ebd017,transparent 60%),
+    linear-gradient(110deg,#30364c,#283248);
+}
+[data-theme=neo] .preview-panel .panel-bar{
+  background:radial-gradient(ellipse at 8% -35%,#95ebd047,transparent 72%),
+    radial-gradient(ellipse at 100% 110%,#b79bff30,transparent 60%),
+    linear-gradient(110deg,#2d3b47,#2d334a);
+}
+[data-theme=neo] .code-panel .panel-bar::after{content:none}
+[data-theme=neo] .code-status{
+  background:radial-gradient(ellipse at 100% 130%,#95ebd017,transparent 65%),#192131;
+  border-top-color:#91a3ba21;
+}
+[data-theme=neo] .player-controls{
+  background:radial-gradient(ellipse at 90% 150%,#bdaaff2b,transparent 70%),linear-gradient(115deg,#2c3d46,#2c354a);
+  border-top-color:#92b0ba2b;
+}
+[data-theme=neo] .concept-grid{gap:23px}
+[data-theme=neo] .concept-grid article{
+  --card-light:174,140,250;
+  --card-edge:var(--glass-edge-lilac);
+  --card-base:#252c40;
+  border:1px solid transparent;
+  border-radius:var(--glass-radius);
+  background:radial-gradient(ellipse at 5% -12%,rgba(var(--card-light),.28),transparent 64%) padding-box,
+    linear-gradient(145deg,var(--card-base),#1e2635) padding-box,
+    linear-gradient(135deg,var(--card-edge),rgba(var(--card-light),.60) 17%,#56647b40 42%,#404b6338 70%,rgba(var(--card-light),.62) 100%) border-box;
+  box-shadow:0 0 0 3px rgba(var(--card-light),.055),-4px -4px 25px rgba(var(--card-light),.075),0 12px 28px #080d1924;
+  transition:box-shadow .2s;
+}
+[data-theme=neo] .concept-grid article:nth-child(2){--card-light:121,231,180;--card-edge:var(--glass-edge-mint);--card-base:#26363b}
+[data-theme=neo] .concept-grid article:nth-child(3){--card-light:238,151,124;--card-edge:var(--glass-edge-coral);--card-base:#322e3e}
+[data-theme=neo] .concept-grid article::before{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  left:13px;
+  top:0;
+  width:40%;
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(var(--card-light),.15) 7%,var(--card-edge) 22%,rgba(var(--card-light),.55) 50%,transparent 100%);
+  filter:drop-shadow(0 1px 4px rgba(var(--card-light),.4));
+}
+[data-theme=neo] .concept-grid article:hover{
+  border-color:transparent;
+  box-shadow:0 0 0 3px rgba(var(--card-light),.08),-4px -4px 30px rgba(var(--card-light),.11),0 12px 28px #080d1933;
+}
+[data-theme=neo] .concept-grid .concept-symbol{color:var(--card-edge);text-shadow:0 0 14px rgba(var(--card-light),.23)}
+[data-theme=neo] .terminal,
+[data-theme=neo] .tip{
+  border:1px solid transparent;
+  border-radius:9px;
+  background:radial-gradient(ellipse at 0% -10%,#95ebd016,transparent 70%) padding-box,
+    linear-gradient(120deg,#263242,#232c3e) padding-box,
+    linear-gradient(120deg,#95ebd075,#7382a63d 40%,#505f7633 75%,#bdaaff5e) border-box;
+  box-shadow:-3px -2px 18px #95ebd008,0 7px 20px #080d1917;
+}
+[data-theme=neo] .tip{
+  background:radial-gradient(ellipse at 0% -10%,#95ebd012,transparent 70%) padding-box,
+    linear-gradient(120deg,#243338,#222c36) padding-box,
+    linear-gradient(120deg,#95ebd063,#6e9a8c33 40%,#3b564b2b 75%,#8fbda140) border-box;
+}
+/* Lesson navigation: quiet indigo glass, with sage light marking the current step. */
+[data-theme=neo] .sidebar{
+  padding:0;
+  border:1px solid #8a91bb30;
+  border-radius:12px;
+  background:radial-gradient(ellipse at 45% -140%,#a697ec1f,transparent 76%),
+    linear-gradient(135deg,#242b3e80,#1c253373);
+  box-shadow:inset 0 1px 0 #d4d8f50a,0 6px 22px #080d191f;
+  backdrop-filter:blur(18px);
+}
+[data-theme=neo] .sidebar::before{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  top:0;
+  left:4%;
+  width:92%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#b5aff230 35%,#b5aff21a 70%,transparent);
+}
+[data-theme=neo] .sidebar nav{
+  gap:5px;
+  padding:6px;
+  border-radius:11px;
+  align-items:stretch;
+  box-shadow:none;
+}
+[data-theme=neo] .lesson-link{
+  position:relative;
+  align-items:center;
+  gap:12px;
+  min-height:60px;
+  padding:11px 15px;
+  border:1px solid transparent;
+  border-radius:8px;
+  color:#abb2c4;
+  background:none;
+  box-shadow:none;
+  transition:background .2s,color .2s,box-shadow .2s;
+}
+[data-theme=neo] .lesson-link span:last-child{font-weight:550}
+[data-theme=neo] .lesson-link small{
+  display:block;
+  margin-top:4px;
+  color:#7f899f;
+  opacity:1;
+  font-size:8px;
+  font-weight:400;
+  line-height:1.4;
+}
+[data-theme=neo] .lesson-no{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 27px;
+  height:27px;
+  margin:0;
+  border:1px solid #b5aff217;
+  border-radius:50%;
+  background:#b5aff207;
+  box-shadow:none;
+  color:#9b98ba;
+  opacity:1;
+  font-size:9px;
+  font-variant-numeric:tabular-nums;
+}
+[data-theme=neo] .lesson-link:not(.active):hover{
+  border-color:transparent;
+  color:#e3e0ee;
+  background:radial-gradient(ellipse at 30% -40%,#b5aff218,transparent 80%),#b5aff206;
+  box-shadow:inset 0 1px 0 #b5aff20a;
+}
+[data-theme=neo] .lesson-link:not(.active):hover .lesson-no{
+  border-color:#b5aff238;
+  color:#c5bced;
+}
+[data-theme=neo] .lesson-link.active{
+  border-color:transparent;
+  background:radial-gradient(ellipse at 14% -35%,#9bd8b72b,transparent 76%),
+    linear-gradient(120deg,#2b413f80,#2831476b);
+  box-shadow:inset 0 1px 0 #c4f0d90a,0 3px 12px #080d191c;
+  color:#d4e8db;
+}
+[data-theme=neo] .lesson-link.active::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  padding:1px;
+  border-radius:inherit;
+  pointer-events:none;
+  background:linear-gradient(125deg,#b3dfc66b 0%,#8bbda336 30%,#a39cce26 65%,#8bbda326 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+[data-theme=neo] .lesson-link.active::after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  bottom:0;
+  left:48px;
+  width:38%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#9bd8b770 30%,#8bbda347 65%,transparent);
+  filter:drop-shadow(0 0 4px #95ebd029);
+}
+[data-theme=neo] .lesson-link.active small{color:#96afa6}
+[data-theme=neo] .lesson-link.active .lesson-no{
+  border-color:#8bbda35c;
+  background:radial-gradient(circle at 30% 10%,#b3dfc61c,#8bbda314 70%);
+  color:#bce8cf;
+  box-shadow:inset 0 1px 0 #ddffed17,0 0 10px #8bbda310;
+  text-shadow:none;
+}
+[data-theme=neo] .lesson-link:focus-visible{
+  outline:2px solid var(--neon-mint);
+  outline-offset:2px;
+}
+@media(max-width:900px){
+  [data-theme=neo] .lesson-link{min-height:50px;gap:9px;padding:10px}
+  [data-theme=neo] .lesson-link small{display:none}
+  [data-theme=neo] .lesson-no{flex-basis:23px;height:23px}
+}
+@media(max-width:650px){
+  [data-theme=neo] .sidebar nav{padding:6px;gap:5px}
+  [data-theme=neo] .lesson-link{min-height:48px;padding:9px 8px;gap:9px}
+  [data-theme=neo] .lesson-no{flex-basis:22px;height:22px;font-size:8px}
+  [data-theme=neo] .lesson-link.active::after{left:39px;width:42%}
+}
+/* Action controls share the dark glass and restrained sage light of the cards. */
+[data-theme=neo] .primary-btn,
+[data-theme=neo] .play-button{
+  border:1px solid transparent;
+  border-radius:8px;
+  color:#c5e6d4;
+  background:radial-gradient(ellipse at 14% -30%,#9bd8b72b,transparent 78%) padding-box,
+    linear-gradient(125deg,#2b4142,#25323e) padding-box,
+    linear-gradient(125deg,#b8e5cd80,#8bbda347 42%,#a39cce3d 75%,#8bbda34d) border-box;
+  box-shadow:inset 0 1px 0 #daf7e70a,0 3px 10px #080d192e,0 0 14px #8bbda309;
+  filter:none;
+  transition:background .2s,box-shadow .2s,color .2s,transform .2s;
+}
+[data-theme=neo] .primary-btn svg{color:#a4d9bc}
+[data-theme=neo] .play-button{width:30px;height:30px}
+[data-theme=neo] .primary-btn:hover,
+[data-theme=neo] .play-button:hover{
+  color:#d8f3e3;
+  background:radial-gradient(ellipse at 14% -30%,#9bd8b738,transparent 78%) padding-box,
+    linear-gradient(125deg,#304b47,#293847) padding-box,
+    linear-gradient(125deg,#c1efd699,#8bbda35c 42%,#b5aff252 75%,#8bbda366) border-box;
+  box-shadow:inset 0 1px 0 #daf7e714,0 4px 12px #080d1933,0 0 16px #8bbda312;
+  filter:none;
+}
+[data-theme=neo] .primary-btn:active,
+[data-theme=neo] .play-button:active{
+  transform:translateY(0);
+  box-shadow:inset 0 2px 5px #080d1933,0 0 9px #8bbda30c;
+}
+[data-theme=neo] .primary-btn:focus-visible,
+[data-theme=neo] .play-button:focus-visible{
+  outline:2px solid #9bd8b7;
+  outline-offset:3px;
+}
+/* Logo: the same smooth glass light, with a continuous graduated neon outline. */
+[data-theme=neo] .hero-circle{
+  border:1px solid transparent;
+  background:radial-gradient(circle at 26% 18%,#baffdf9c 0%,#7bdbb270 31%,#459d7d4d 64%,#7ec6a866 100%);
+  box-shadow:inset 0 0 28px #95ebd012,0 0 14px #95ebd01a,0 0 34px #95ebd015,0 0 64px #95ebd00c;
+}
+[data-theme=neo] .hero-square{
+  border:1px solid transparent;
+  background:radial-gradient(ellipse at 15% 8%,#d4c2ffa3 0%,#a18aeb78 32%,#695ac251 66%,#9c83db66 100%);
+  box-shadow:inset 0 0 28px #bdaaff13,0 0 14px #bdaaff1a,0 0 34px #bdaaff15,0 0 64px #bdaaff0c;
+}
+[data-theme=neo] .hero-circle::after,
+[data-theme=neo] .hero-square::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  padding:1px;
+  border-radius:inherit;
+  pointer-events:none;
+  background:linear-gradient(135deg,#e0fff1ed 0%,#90f1c6bd 20%,#7cb69a24 46%,#77b29a1c 70%,#b4f5d9bd 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+[data-theme=neo] .hero-square::after{
+  background:linear-gradient(135deg,#eee6fff0 0%,#c6aaffbd 20%,#9a8ad024 46%,#9385c91c 70%,#d1c2ffbd 100%);
+}
+[data-theme=neo] .hero-triangle{
+  background:none;
+  clip-path:none;
+  overflow:visible;
+  filter:drop-shadow(0 0 9px #f5ae9633) drop-shadow(0 0 24px #df866b1f) drop-shadow(0 0 42px #f5ae960d);
+}
+@media(max-width:900px){[data-theme=neo] .lab-grid{gap:22px}}
+@media(max-width:650px){
+  [data-theme=neo] .lab-grid{gap:23px}
+  [data-theme=neo] .concept-grid{gap:17px}
+}
+
+/* Classic light counterpart copied from old.css. */
+/* 04 · Prisma — a refracted desktop window */
+body[data-theme=old]{--radius:8px;--bg:#cdcddf;--surface:#f4f3fa;--text:#30334e;--accent:#55598e;--muted:#818099;--border:#d2d0e3;--panel:#efedf7;--inline:#8984b312;--code:#25283b;background:linear-gradient(125deg,transparent 12%,#ffffff33 12%,#ffffff08 27%,transparent 27%),radial-gradient(ellipse at 10% 10%,#eee0e7,transparent 55%),radial-gradient(ellipse at 95% 100%,#b2bbc7,transparent 60%),#bfc1da;background-attachment:fixed}
+[data-theme=old] .site-shell{padding:0 37px;max-width:1430px}
+[data-theme=old] .site-header{height:103px;color:#4a4b6b}
+[data-theme=old] .header-caption{color:#71738c}
+[data-theme=old] .window-caption{height:38px;display:flex;align-items:center;justify-content:space-between;font-size:10px;padding:0 15px;background:linear-gradient(110deg,#ffffffb0,#e5e3f480 33%,#ffffff30 33%,#c7c9e060 60%,#ece9f399);border:1px solid #f8f6ff;border-bottom:0;border-radius:10px 10px 0 0;box-shadow:0 0 0 1px #8589b599,inset 0 1px 0 #fff;color:#4e5376;text-shadow:0 1px 6px white}
+[data-theme=old] .window-caption>span:last-child{font-size:12px;letter-spacing:7px;opacity:.6}
+[data-theme=old] .lesson-layout{border:7px solid #eceafa70;border-top-width:4px;border-radius:0 0 10px 10px;box-shadow:0 0 0 1px #8589b599,0 15px 50px #4e527d33;background:#cccde170;grid-template-columns:205px minmax(0,1fr)}
+[data-theme=old] .sidebar{background:linear-gradient(100deg,#e6e4f280,#e1e0efc0);border-color:#bbbdd6}
+[data-theme=old] .sidebar-title{color:#8182a1}
+[data-theme=old] .lesson-link{border-radius:5px}
+[data-theme=old] .lesson-link.active{background:linear-gradient(#f5f1ff,#d8d7ec 49%,#c3c4df 50%,#e0deef);border-color:#a6a6ca;color:#555985;box-shadow:inset 0 1px 0 #fff,0 2px 4px #5a5c8820}
+[data-theme=old] .course-note{border-color:#bfbdd5;background:linear-gradient(130deg,#fff5,#bcb9d422);color:#777895}
+[data-theme=old] .note-orb{background:linear-gradient(#fbf8ff,#cac9e0 49%,#b0b2d1 50%,#dad7ed);border-color:#aaaacb;color:#666a98}
+[data-theme=old] .course-line{background:linear-gradient(90deg,#9496b6 25%,#d2d0e1 25%)}
+[data-theme=old] .breadcrumbs{background:linear-gradient(#fff,#e9e7f3 48%,#deddeb 50%,#f0edf7);border-bottom-color:#c5c5db}
+[data-theme=old] .lesson-hero{background:radial-gradient(ellipse at 100% 0,#e9e6f0,transparent 70%);padding-top:38px}
+[data-theme=old] .hero-text h1{font-weight:450}
+[data-theme=old] .hero-square{background:linear-gradient(130deg,#e3e1ffaa,#9697c399 49%,#7175a799 50%,#a9abd4dd);border-color:#c7c5e1;box-shadow:inset 0 1px 0 white,0 14px 30px #5b5c9325}
+[data-theme=old] .primary-btn{background:linear-gradient(#f5f0ff,#dad9f2 49%,#bdbfe0 50%,#e4dff4);border:1px solid #a2a2c9;color:#4f5585;box-shadow:inset 0 1px 0 #fff,0 3px 6px #4b4f7e20;border-radius:5px}
+[data-theme=old] .panel-bar{background:linear-gradient(#ffffff1c,#ffffff04 48%,#00000007 50%,#ffffff09)}
+[data-theme=old] .code-panel{border-color:#6b6f93;box-shadow:0 0 0 3px #e2e1ed,0 3px 7px #30334d15}
+[data-theme=old] .preview-panel{border-color:#bfc1d9;box-shadow:0 0 0 3px #e9e7f2}
+[data-theme=old] .preview-panel .panel-bar{background:linear-gradient(#faf7ff,#e3e0f1 49%,#d8d5e8 50%,#eeeaf8);border-color:#c5c5db;color:#6c6e98}
+[data-theme=old] .preview-stage{background:radial-gradient(ellipse,#e1e3ef,#efedf7 70%)}
+[data-theme=old] .player-controls{background:linear-gradient(#fbf8ff,#e3e1ee 49%,#d6d4e6 50%,#e8e6f2)}
+[data-theme=old] .play-button{background:linear-gradient(#ffffff,#d1d2ed 49%,#b5b9dc 50%,#ddd9ed);border-color:#a2a8c9;color:#606795}
+[data-theme=old] .terminal{background:linear-gradient(#f9f7fc,#eeebf5);border-color:#cfccdf}
+[data-theme=old] .tip{background:linear-gradient(#f2f6ef,#e8ede6);border-color:#ccd6c8}
+[data-theme=old] .concept-grid article{background:linear-gradient(#fcfaff,#edebf4);border-color:#d2cfe2;box-shadow:inset 0 1px 0 #fff,0 2px 4px #5150770a}
+[data-theme=old] .complete-button{background:linear-gradient(#fff,#e8e4f5 49%,#d7d4e8 50%,#efebf5);border-color:#c2bed8;color:#696b96}
+
+/* Compatibility with the shared lesson and its persistent theme controls. */
+body[data-theme=old]{color-scheme:light}
+[data-theme=old] .brand-mark i{background:#777aaf}
+[data-theme=old] .brand-mark b{background:#8baf9b}
+[data-theme=old] .brand-mark em{border-bottom-color:#cd7f66}
+[data-theme=old] .design-toolbar{
+  color:#4e5275;
+  border-bottom-color:#aaacc7;
+  background:linear-gradient(#f7f4ffed,#e2dff0e8 48%,#cdcee4ed 50%,#e8e5f2ed);
+  box-shadow:inset 0 1px 0 #fff,0 2px 7px #53567b20;
+}
+[data-theme=old] .design-label>span:last-child{color:#777b97}
+[data-theme=old] .theme-picker{border-color:#b4b3cf;background:linear-gradient(#cecee149,#f6f3fc70);box-shadow:inset 0 1px 3px #5f628a1a}
+[data-theme=old] .theme-picker button{color:#64678a}
+[data-theme=old] .theme-picker button:hover{color:#404774;background:#f9f6ff77}
+[data-theme=old] .theme-picker button[aria-pressed=true]{border-color:#aaa9ce;color:#4f5585;background:linear-gradient(#fbf8ff,#e1dff2 49%,#c9cae6 50%,#eee8f9);box-shadow:inset 0 1px 0 white,0 1px 3px #55577d1a}
+[data-theme=old] .hero-triangle path{display:none}
+[data-theme=old] .window-caption{backdrop-filter:blur(16px)}
+[data-theme=old] .complete-button.completed{background:linear-gradient(#f2f8ee,#d1e1cf);border-color:#a9bea7;color:#4c6d4d}
+[data-theme=old] .style-dialog{box-shadow:0 0 0 5px #e5e1f04d,0 25px 70px #30365855}
+[data-theme=old] .style-dialog::backdrop{background:#3a3e6266;backdrop-filter:blur(6px)}
+[data-theme=old] .dialog-top{background:linear-gradient(#faf7ff,#e3e0f1 49%,#d8d5e8 50%,#eeeaf8);border-color:#c5c5db}
+/* Original Prisma breakpoints, preserved alongside the unchanged dark layout. */
+@media(max-width:1150px){
+  [data-theme=old] .site-shell{padding:0 22px}
+  [data-theme=old] .lesson-layout{grid-template-columns:180px minmax(0,1fr)}
+}
+@media(max-width:900px){
+  [data-theme=old] .lesson-layout{grid-template-columns:160px minmax(0,1fr)}
+}
+@media(max-width:650px){
+  [data-theme=old] .site-shell{padding:0 12px}
+  [data-theme=old] .site-header{height:88px}
+  [data-theme=old] .window-caption{height:34px;font-size:8px;padding:0 10px}
+  [data-theme=old] .window-caption>span:last-child{font-size:8px;letter-spacing:3px}
+  [data-theme=old] .lesson-layout{display:block;border-width:5px;border-top-width:3px}
+  [data-theme=old] .lesson-hero{padding:28px 17px 29px}
+  [data-theme=old] .hero-text h1{font-size:41px}
+  [data-theme=old] .work-section,[data-theme=old] .concepts{padding-left:17px;padding-right:17px}
+  [data-theme=old] .breadcrumbs{padding:14px 17px}
+  [data-theme=old] .hero-text .eyebrow{font-size:6px}
+  [data-theme=old] .practice{margin-left:17px;margin-right:17px}
+}
