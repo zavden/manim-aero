@@ -35,3 +35,7 @@ node --check dist/assets/app.js
 ```
 
 Check visual changes, navigation, theme switching, the style guide, and playback controls in the browser.
+
+## Next stage
+
+The next planned step is converting Jupyter notebooks into tutorial pages using Neo and Old. See [the continuity note](docs/HANDOFF.md) for the approved design, project structure, checkpoints, and pending decisions. The first notebook has not been supplied yet.
