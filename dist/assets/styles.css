@@ -79,9 +79,6 @@ body[data-theme=orbita]{--bg:#e8efeb;--surface:#f8fbf9;--text:#263b35;--muted:#7
 .hero-circle{position:absolute;width:114px;height:114px;left:12%;top:85px;border-radius:50%;z-index:3;background:radial-gradient(ellipse at 35% 10%,#e8f5e5dd,#a7cbb4a0 48%,#8baf9bb0 49%,#a5c7b1);border:1px solid #a1c1ad;box-shadow:inset 0 2px 2px #f1ffe9dd,0 14px 25px #315c3c14}
 .hero-square{position:absolute;width:102px;height:102px;left:48%;top:30px;background:linear-gradient(140deg,#b7b8d4bb,#666b9da0 50%,#5b608f99 51%,#9699bdcc);border:1px solid #b0b2cf;transform:rotate(10deg);border-radius:3px;box-shadow:inset 0 2px 0 #ffffffa0,0 14px 20px #44457710;z-index:2}
 .hero-triangle{position:absolute;width:85px;height:76px;left:65%;top:140px;background:linear-gradient(140deg,#efd3c1dd,#d49378aa 49%,#cd7f66aa 50%,#d6a089dd);clip-path:polygon(50% 0,100% 100%,0 100%);transform:rotate(-9deg);z-index:4}
-.coordinate{position:absolute;top:202px;left:17%;font-family:monospace;color:var(--muted);font-size:8px}
-.art-caption{position:absolute;top:240px;right:5%;font-family:Georgia,serif;font-size:10px;font-style:italic;color:var(--muted);white-space:nowrap}
-.orbit-line{position:absolute;inset:25px -15px;width:110%;height:200px;fill:none;stroke:#8baf9b55;stroke-width:1;stroke-dasharray:3 4;z-index:1}
 .work-section,.concepts{padding:25px 36px 0}
 .section-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .section-heading .eyebrow{font-size:7px;color:var(--muted);letter-spacing:1.4px;margin-bottom:9px}
@@ -214,9 +211,6 @@ body[data-theme=orbita]{--bg:#191e29;--surface:#202637;--text:#eae8e3;--accent:#
 [data-theme=orbita] .hero-circle{width:144px;height:144px;top:105px;left:8%;background:radial-gradient(circle at 35% 15%,#c9decbbb,#8baf9b55 48%,#75998360 50%,#9ebfa077);border-color:#9ec2ac99;box-shadow:inset 0 2px 4px #e9ffe8aa,0 0 50px #a5cbac20}
 [data-theme=orbita] .hero-square{width:133px;height:133px;top:35px;background:linear-gradient(140deg,#babde5a0,#686da650 49%,#51568770 50%,#8387b688);box-shadow:inset 0 1px 0 #dbe0ff99,0 0 60px #7f84c330}
 [data-theme=orbita] .hero-triangle{width:110px;height:100px;top:170px}
-[data-theme=orbita] .coordinate{top:260px}
-[data-theme=orbita] .art-caption{top:290px}
-[data-theme=orbita] .orbit-line{top:55px;height:230px;stroke:#9aa5d24d}
 [data-theme=orbita] .work-section,[data-theme=orbita] .concepts{padding:25px 0 0}
 [data-theme=orbita] .section-heading h2{font-size:26px;font-weight:450}
 [data-theme=orbita] .lab-grid{gap:22px;grid-template-columns:1.2fr 1fr}
@@ -490,3 +484,186 @@ body[data-theme=orbita]{--neon-mint:#a2dfcd;--neon-lilac:#bcb6f1;background:radi
 html{scroll-padding-top:76px}
 }
 
+/* Órbita: open canvas, glass panels with smooth light and selective neon edges. */
+body[data-theme=orbita]{
+  --glass-radius:12px;
+  --glass-edge-lilac:#cec4ff;
+  --glass-edge-mint:#b3f5dc;
+  --glass-edge-coral:#efb6a5;
+}
+[data-theme=orbita] .site-shell{max-width:1270px}
+[data-theme=orbita] .lesson-layout{
+  display:block;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:none;
+  box-shadow:none;
+  backdrop-filter:none;
+  overflow:visible;
+}
+[data-theme=orbita] .lab-grid{gap:26px}
+[data-theme=orbita] .code-panel,
+[data-theme=orbita] .preview-panel{
+  position:relative;
+  border:1px solid transparent;
+  border-radius:var(--glass-radius);
+  isolation:isolate;
+}
+[data-theme=orbita] .code-panel{
+  background:linear-gradient(#151b28,#151b28) padding-box,
+    linear-gradient(135deg,#e4dcffc9 0%,#a69aff9c 14%,#5b65804d 36%,#3e50663d 62%,#7ccbb4a8 89%,#b3f5dcc7 100%) border-box;
+  box-shadow:0 0 0 3px #a79df916,-5px -4px 25px #a79df91a,6px 5px 25px #8dd8be10,0 15px 34px #080d192e;
+}
+[data-theme=orbita] .preview-panel{
+  background:linear-gradient(#222b3d,#222b3d) padding-box,
+    linear-gradient(135deg,#c7ffebcc 0%,#8ad8bfa6 14%,#526c744d 36%,#434a6f3d 62%,#a499eab0 89%,#d2c9ffc9 100%) border-box;
+  box-shadow:0 0 0 3px #9bcbbb14,-5px -4px 25px #9ae6c917,6px 5px 25px #b2a3f516,0 15px 34px #080d192e;
+}
+/* Short bright edge segments behave like reflected light, not a uniform neon frame. */
+[data-theme=orbita] .code-panel::before,
+[data-theme=orbita] .preview-panel::before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  pointer-events:none;
+  top:0;
+  left:12px;
+  width:38%;
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,#efe7ff26 7%,#efe7ffcc 22%,#c2b4ff8c 50%,transparent 100%);
+  filter:drop-shadow(0 1px 4px #b8a7ff70);
+}
+[data-theme=orbita] .preview-panel::before{
+  background:linear-gradient(90deg,transparent 0%,#d9fff129 7%,#d9fff1dd 22%,#a2dfcd99 50%,transparent 100%);
+  filter:drop-shadow(0 1px 4px #a2dfcd66);
+}
+[data-theme=orbita] .code-panel .panel-bar,
+[data-theme=orbita] .preview-panel .panel-bar{
+  height:43px;
+  border-bottom:1px solid #9ba8d32e;
+  box-shadow:none;
+  background:radial-gradient(ellipse at 8% -35%,#b09fff52,transparent 72%),
+    radial-gradient(ellipse at 100% 110%,#a2dfcd17,transparent 60%),
+    linear-gradient(110deg,#30364c,#283248);
+}
+[data-theme=orbita] .preview-panel .panel-bar{
+  background:radial-gradient(ellipse at 8% -35%,#a2dfcd47,transparent 72%),
+    radial-gradient(ellipse at 100% 110%,#b8a7ff29,transparent 60%),
+    linear-gradient(110deg,#2d3b47,#2d334a);
+}
+[data-theme=orbita] .code-panel .panel-bar::after{content:none}
+[data-theme=orbita] .code-status{
+  background:radial-gradient(ellipse at 100% 130%,#a2dfcd17,transparent 65%),#192131;
+  border-top-color:#91a3ba21;
+}
+[data-theme=orbita] .player-controls{
+  background:radial-gradient(ellipse at 90% 150%,#bcb6f12b,transparent 70%),linear-gradient(115deg,#2c3d46,#2c354a);
+  border-top-color:#92b0ba2b;
+}
+[data-theme=orbita] .concept-grid{gap:23px}
+[data-theme=orbita] .concept-grid article{
+  --card-light:170,151,239;
+  --card-edge:var(--glass-edge-lilac);
+  --card-base:#252c40;
+  border:1px solid transparent;
+  border-radius:var(--glass-radius);
+  background:radial-gradient(ellipse at 5% -12%,rgba(var(--card-light),.24),transparent 64%) padding-box,
+    linear-gradient(145deg,var(--card-base),#1e2635) padding-box,
+    linear-gradient(135deg,var(--card-edge),rgba(var(--card-light),.60) 17%,#56647b40 42%,#404b6338 70%,rgba(var(--card-light),.62) 100%) border-box;
+  box-shadow:0 0 0 3px rgba(var(--card-light),.055),-4px -4px 25px rgba(var(--card-light),.075),0 12px 28px #080d1924;
+  transition:box-shadow .2s;
+}
+[data-theme=orbita] .concept-grid article:nth-child(2){--card-light:134,218,182;--card-edge:var(--glass-edge-mint);--card-base:#26363b}
+[data-theme=orbita] .concept-grid article:nth-child(3){--card-light:220,157,140;--card-edge:var(--glass-edge-coral);--card-base:#322e3e}
+[data-theme=orbita] .concept-grid article::before{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  left:13px;
+  top:0;
+  width:40%;
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(var(--card-light),.15) 7%,var(--card-edge) 22%,rgba(var(--card-light),.55) 50%,transparent 100%);
+  filter:drop-shadow(0 1px 4px rgba(var(--card-light),.4));
+}
+[data-theme=orbita] .concept-grid article:hover{
+  border-color:transparent;
+  box-shadow:0 0 0 3px rgba(var(--card-light),.08),-4px -4px 30px rgba(var(--card-light),.11),0 12px 28px #080d1933;
+}
+[data-theme=orbita] .concept-grid .concept-symbol{color:var(--card-edge);text-shadow:0 0 14px rgba(var(--card-light),.23)}
+[data-theme=orbita] .terminal,
+[data-theme=orbita] .tip{
+  border:1px solid transparent;
+  border-radius:9px;
+  background:radial-gradient(ellipse at 0% -10%,#a2dfcd16,transparent 70%) padding-box,
+    linear-gradient(120deg,#263242,#232c3e) padding-box,
+    linear-gradient(120deg,#a2dfcd75,#7382a63d 40%,#505f7633 75%,#bcb6f15e) border-box;
+  box-shadow:-3px -2px 18px #a2dfcd08,0 7px 20px #080d1917;
+}
+[data-theme=orbita] .tip{
+  background:radial-gradient(ellipse at 0% -10%,#a2dfcd12,transparent 70%) padding-box,
+    linear-gradient(120deg,#243338,#222c36) padding-box,
+    linear-gradient(120deg,#a2dfcd63,#6e9a8c33 40%,#3b564b2b 75%,#8fbda140) border-box;
+}
+/* Smooth glass light on the remaining controls replaces the old split reflection. */
+[data-theme=orbita] .sidebar{
+  background:radial-gradient(ellipse at 0% -50%,#9ba3e02b,transparent 65%),linear-gradient(110deg,#343e53c7,#2b3348b3);
+  border-color:#8f9bc15e;
+  box-shadow:inset 0 1px 0 #c2c7ff21,0 6px 20px #00000012;
+}
+[data-theme=orbita] .lesson-link.active{
+  background:radial-gradient(ellipse at 15% -30%,#b9acff30,transparent 78%),linear-gradient(120deg,#48516d80,#3d476180);
+  border-color:#b6b0f280;
+  box-shadow:inset 0 1px 0 #ded8ff26,0 0 12px #a998ff12;
+}
+[data-theme=orbita] .primary-btn{
+  background:radial-gradient(ellipse at 12% -35%,#edfff3c9,transparent 75%),linear-gradient(125deg,#afd6c3,#8db9a7 75%,#a1c4b6);
+  border-color:#cbf0ddb3;
+  box-shadow:inset 0 1px 0 #effff259,0 0 15px #a4d3ae20,0 4px 20px #8baf9b14;
+}
+[data-theme=orbita] .primary-btn:hover{box-shadow:inset 0 1px 0 #effff280,0 0 22px #a4d3ae2e,0 5px 24px #8baf9b20}
+[data-theme=orbita] .play-button{
+  background:radial-gradient(circle at 25% 10%,#daf8e6,#9ac9b2 55%,#77a38f);
+  border-color:#c2edda9c;
+  box-shadow:inset 0 1px 0 #edffed66,0 0 11px #a9d4af2b;
+}
+/* Logo: the same smooth glass light, with a continuous graduated neon outline. */
+[data-theme=orbita] .hero-circle{
+  border:1px solid transparent;
+  background:radial-gradient(circle at 26% 18%,#d6ffe878 0%,#a2dfcd40 31%,#76aa942b 64%,#98cbb83d 100%);
+  box-shadow:inset 0 0 24px #a2dfcd12,0 0 18px #a2dfcd0c;
+}
+[data-theme=orbita] .hero-square{
+  border:1px solid transparent;
+  background:radial-gradient(ellipse at 15% 8%,#dfd5ff80 0%,#aba0e84d 32%,#7974b829 66%,#a89edb3d 100%);
+  box-shadow:inset 0 0 24px #bcb6f114,0 0 18px #bcb6f10c;
+}
+[data-theme=orbita] .hero-circle::after,
+[data-theme=orbita] .hero-square::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  padding:1px;
+  border-radius:inherit;
+  pointer-events:none;
+  background:linear-gradient(135deg,#e0fff1ed 0%,#a5efd1b3 20%,#7cb69a24 46%,#77b29a1c 70%,#b4f5d9bd 100%);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+[data-theme=orbita] .hero-square::after{
+  background:linear-gradient(135deg,#eee6fff0 0%,#d0bfffb3 20%,#9a8ad024 46%,#9385c91c 70%,#d1c2ffbd 100%);
+}
+[data-theme=orbita] .hero-triangle{
+  background:none;
+  clip-path:none;
+  overflow:visible;
+  filter:drop-shadow(0 0 6px #efb6a510);
+}
+@media(max-width:900px){[data-theme=orbita] .lab-grid{gap:22px}}
+@media(max-width:650px){
+  [data-theme=orbita] .lab-grid{gap:23px}
+  [data-theme=orbita] .concept-grid{gap:17px}
+}
